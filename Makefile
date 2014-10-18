@@ -6,16 +6,18 @@ PORT           = 8000
 BASEDIR	       = $(CURDIR)
 INPUTDIR       = $(BASEDIR)/content
 OUTPUTDIR      = $(BASEDIR)/output
-CONFFILE       = $(BASEDIR)/pelicanconf.py
-PUBLISHCONF    = $(BASEDIR)/publishconf.py
+CONFFILE       = $(BASEDIR)/pelican/conf-dev.py
+PUBLISHCONF    = $(BASEDIR)/pelican/conf-pub.py
 
-# for develop_server.sh
+# for server_helper
 export PY PELICAN PELICANOPTS PORT BASEDIR INPUTDIR OUTPUTDIR CONFFILE
+SERVER_HELPER  = $(BASEDIR)/pelican/server-helper
+
 
 SSH_HOST       = ehwaz.owlfolio.org
 SSH_PORT       = 22
 SSH_USER       = readings
-SSH_TARGET_DIR = /var/www
+SSH_TARGET_DIR = .
 
 DEBUG ?= 0
 ifeq ($(DEBUG),1)
@@ -55,10 +57,10 @@ serve:
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server $(PORT)
 
 devserver:
-	$(BASEDIR)/develop_server.sh restart
+	$(SERVER_HELPER) restart
 
 stopserver:
-	$(BASEDIR)/develop_server.sh stop
+	$(SERVER_HELPER) stop
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
