@@ -1,6 +1,10 @@
-*~
+/output/
+/pelican/cache/
+/pelican.pid
+/srv.pid
 *.pyc
 *.pyo
 __pycache__/
-cache/
-/output/
+*~
+.#*
+\#*#

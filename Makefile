@@ -1,4 +1,3 @@
-PY            ?= python
 PELICAN       ?= pelican
 PELICANOPTS    =
 PORT           = 8000
@@ -6,18 +5,27 @@ PORT           = 8000
 BASEDIR	       = $(CURDIR)
 INPUTDIR       = $(BASEDIR)/content
 OUTPUTDIR      = $(BASEDIR)/output
-CONFFILE       = $(BASEDIR)/pelican/conf-dev.py
-PUBLISHCONF    = $(BASEDIR)/pelican/conf-pub.py
+CONFFILE       = $(BASEDIR)/pelican/conf.py
+PUBLISHCONF    = $(BASEDIR)/pelican/conf_pub.py
+DEVSERVER      = $(BASEDIR)/pelican/devserver
+REDIRS         = $(BASEDIR)/pelican/redir.cfg
 
-# for server_helper
-export PY PELICAN PELICANOPTS PORT BASEDIR INPUTDIR OUTPUTDIR CONFFILE
+# for server-helper
+export PELICAN PELICANOPTS BASEDIR INPUTDIR OUTPUTDIR CONFFILE
+export DEVSERVER REDIRS PORT
+
 SERVER_HELPER  = $(BASEDIR)/pelican/server-helper
 
-
-SSH_HOST       = ehwaz.owlfolio.org
+SSH_HOST       = of-readings
 SSH_PORT       = 22
-SSH_USER       = readings
+SSH_USER       =
 SSH_TARGET_DIR = .
+
+ifeq ($(SSH_USER),)
+SSH_DESTINATION :=             $(SSH_HOST):$(SSH_TARGET_DIR)
+else
+SSH_DESTINATION := $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+endif
 
 DEBUG ?= 0
 ifeq ($(DEBUG),1)
@@ -29,12 +37,12 @@ Makefile for a pelican Web site
 
 Usage:
    make html                        (re)generate the web site
+   make publish                     generate using production settings
    make clean                       remove the generated files
    make regenerate                  regenerate files upon modification
-   make publish                     generate using production settings
    make serve [PORT=8000]           serve site at http://localhost:8000
-   make devserver [PORT=8000]       start/restart develop_server.sh
-   make stopserver                  stop local server
+   make devserver [PORT=8000]       serve site and regenerate files
+   make stopserver                  stop local servers
    make ssh_upload                  upload the web site via SSH
    make rsync_upload                upload the web site via rsync+ssh
 
@@ -45,18 +53,21 @@ help:
 	$(file >/dev/stdout,$(help_message))
 
 html:
+	mkdir -p $(OUTPUTDIR)
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
-	-rm -rf $(OUTPUTDIR)
+	-rm -rf $(OUTPUTDIR) $(BASEDIR)/pelican/cache
 
 regenerate:
-	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	mkdir -p $(OUTPUTDIR)
+	$(SERVER_HELPER) restart pelican
 
-serve:
-	cd $(OUTPUTDIR) && $(PY) -m pelican.server $(PORT)
+serve: html
+	$(SERVER_HELPER) restart http
 
 devserver:
+	mkdir -p $(OUTPUTDIR)
 	$(SERVER_HELPER) restart
 
 stopserver:
@@ -65,13 +76,10 @@ stopserver:
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-ssh_upload: publish
-	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* \
-	    $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
-
 rsync_upload: publish
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete $(OUTPUTDIR)/ \
-	    $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete \
+	    --cvs-exclude --exclude /comments/ --exclude /.htaccess.gz \
+	    $(OUTPUTDIR)/ $(SSH_DESTINATION)/
 
 .PHONY: html help clean regenerate serve devserver publish \
         ssh_upload rsync_upload
