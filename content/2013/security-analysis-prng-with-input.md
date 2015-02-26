@@ -3,7 +3,7 @@ Date: 2013-10-24
 Tags: theory, random number generation
 
 Coming up in this year’s [CCS](http://www.sigsac.org/ccs/CCS2013/) is
-a paper with the provocative subtitle“[`/dev/random` is not
+a paper with the provocative subtitle “[`/dev/random` is not
 Robust](http://eprint.iacr.org/2013/338),” and thanks to widespread
 availability of online preprints, it’s already scored quite a bit of
 online attention, e.g. [at Bruce Schneier’s
@@ -33,9 +33,9 @@ and unproblematic:
 > Unfortunately, it is well known that no deterministic extractor is
 > capable to simultaneously extract good randomness from _all_
 > efficiently samplable high-entropy distributions (e.g. consider
-> nearly full entropy distribution *I* which is random, except the
-> first bit of Extract(*I*) is zero).
-
+> nearly full entropy distribution $I$ which is random, except the
+> first bit of $\operatorname{Extract}(I)$ is zero).
+>
 > ... [Therefore], we chose ... to assume the existence of the `setup`
 > procedure ... this will allow one to consider a *seeded* extractor
 > ... which can now extract entropy from _all_ high-entropy
@@ -57,31 +57,35 @@ anyone can download off the manufacturer's website, you have
 accomplished precisely nothing.
 
 The second problem is in the technical details of their proposed
-CSPRNG construction, which I will now quote verbatim. This next bit
-won't display correctly if your browser doesn't support MathML
-(embedded in HTML without benefit of XML goo).
+CSPRNG construction, which I will now quote verbatim.
 
-> Let <math><mrow><mrow><mi mathvariant="bold">G</mi></mrow><mo stretchy="false">:</mo><mo stretchy="false" fence="false">{</mo><mn>0</mn><mo stretchy="false">,</mo><mn>1</mn><msup><mo stretchy="false" fence="false">}</mo><mi>m</mi></msup><mo stretchy="false">→</mo><mo stretchy="false" fence="false">{</mo><mn>0</mn><mo stretchy="false">,</mo><mn>1</mn><msup><mo stretchy="false" fence="false">}</mo><mrow><mi>n</mi><mo stretchy="false">+</mo><mi>l</mi></mrow></msup></mrow></math> be a (deterministic) pseudorandom generator where <math><mrow><mi>m</mi><mo stretchy="false">&lt;</mo><mi>n</mi></mrow></math>. We use the notation <math><mrow><mo stretchy="false">[</mo><mi>y</mi><msubsup><mo stretchy="false">]</mo><mn>1</mn><mi>m</mi></msubsup></mrow></math> to denote the first <math><mrow><mi>m</mi></mrow></math> bits of <math><mrow><mi>y</mi><mo stretchy="false">∈</mo><mo stretchy="false" fence="false">{</mo><mn>0</mn><mo stretchy="false">,</mo><mn>1</mn><msup><mo stretchy="false" fence="false">}</mo><mi>n</mi></msup></mrow></math>. Our construction of PRNG with input has parameters <math><mrow><mi>n</mi></mrow></math> (state length), <math><mrow><mi>l</mi></mrow></math> (output length), and <math><mrow><mi>p</mi><mo stretchy="false">=</mo><mi>n</mi></mrow></math> (sample length), and is defined as follows:
-
-> * <math><mrow><mtext>setup</mtext></mrow></math>: Output <math><mrow><mtext>seed</mtext><mo stretchy="false">=</mo><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">,</mo><msup><mi>X</mi><mi mathvariant="normal">′</mi></msup><mo stretchy="false">)</mo><mo stretchy="false">←</mo><mo stretchy="false" fence="false">{</mo><mn>0</mn><mo stretchy="false">,</mo><mn>1</mn><msup><mo stretchy="false" fence="false">}</mo><mrow><mn>2</mn><mi>n</mi></mrow></msup></mrow></math>.
-> * <math><mrow><msup><mi>S</mi><mi mathvariant="normal">′</mi></msup><mo stretchy="false">=</mo><mtext>refresh</mtext><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">,</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></math>: Given <math><mrow><mtext>seed</mtext><mo stretchy="false">=</mo><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">,</mo><msup><mi>X</mi><mi mathvariant="normal">′</mi></msup><mo stretchy="false">)</mo></mrow></math>, current state <math><mrow><mi>S</mi><mo stretchy="false">∈</mo><mo stretchy="false" fence="false">{</mo><mn>0</mn><mo stretchy="false">,</mo><mn>1</mn><msup><mo stretchy="false" fence="false">}</mo><mi>n</mi></msup></mrow></math>, and a sample <math><mrow><mi>I</mi><mo stretchy="false">∈</mo><mo stretchy="false" fence="false">{</mo><mn>0</mn><mo stretchy="false">,</mo><mn>1</mn><msup><mo stretchy="false" fence="false">}</mo><mi>n</mi></msup></mrow></math>, output <math><mrow><msup><mi>S</mi><mi mathvariant="normal">′</mi></msup><mo stretchy="false">=</mo><mi>S</mi><mo stretchy="false">⋅</mo><mi>X</mi><mo stretchy="false">+</mo><mi>I</mi></mrow></math>, where all operations are over <math><mrow><msub><mrow><mi mathvariant="double-struck">F</mi></mrow><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></msub></mrow></math>.
-> * <math><mrow><mo stretchy="false">(</mo><msup><mi>S</mi><mi mathvariant="normal">′</mi></msup><mo stretchy="false">,</mo><mi>R</mi><mo stretchy="false">)</mo><mo stretchy="false">=</mo><mtext>next</mtext><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></math>: Given <math><mrow><mtext>seed</mtext><mo stretchy="false">=</mo><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">,</mo><msup><mi>X</mi><mi mathvariant="normal">′</mi></msup><mo stretchy="false">)</mo></mrow></math> and a state <math><mrow><mi>S</mi><mo stretchy="false">∈</mo><mo stretchy="false" fence="false">{</mo><mn>0</mn><mo stretchy="false">,</mo><mn>1</mn><msup><mo stretchy="false" fence="false">}</mo><mi>n</mi></msup></mrow></math>, first compute <math><mrow><mi>U</mi><mo stretchy="false">=</mo><mo stretchy="false">[</mo><msup><mi>X</mi><mi mathvariant="normal">′</mi></msup><mo stretchy="false">⋅</mo><mi>S</mi><msubsup><mo stretchy="false">]</mo><mn>1</mn><mi>m</mi></msubsup></mrow></math>. Then output <math><mrow><mo stretchy="false">(</mo><msup><mi>S</mi><mi mathvariant="normal">′</mi></msup><mo stretchy="false">,</mo><mi>R</mi><mo stretchy="false">)</mo><mo stretchy="false">=</mo><mrow><mi mathvariant="bold">G</mi></mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></math>.
+> Let $\mathbf{G}: \{0,1\}^m \to \{0,1\}^{n+l}$ be a (deterministic)
+> pseudorandom generator where $m < n$. We use the notation $[y]_1^m$
+> to denote the first $m$ bits of $y \in \{0,1\}^n$. Our construction
+> of PRNG with input has parameters $n$ (state length), $l$ (output
+> length), and $p = n$ (sample length), and is defined as follows:
+>
+> * $\operatorname{setup}:$ Output
+>   $\text{seed} = (X, X^\prime)\leftarrow\{0,1\}^{2n}$.
+> * $S^\prime = \operatorname{refresh}(S,I):$ Given
+>   $\text{seed} = (X, X^\prime)$,
+>   current state $S \in \{0,1\}^n$, and a sample $I \in \{0,1\}^n$,
+>   output $S^\prime = S \cdot X + I$, where all operations are over
+>   $\mathbb{F}_{2^n}$.
+> * $(S^\prime, R) = \operatorname{next}(S):$ Given
+>   $\text{seed} = (X, X^\prime)$
+>   and a state $S \in \{0,1\}^n$, first compute $U = [X^\prime \cdot S]_1^m$.
+>   Then output $(S^\prime, R) = \mathbf{G}(U)$.
 
 It's a blink-and-you-miss-it sort of thing: by “all operations are
-over <math><mrow><msub><mrow><mi
-mathvariant="double-struck">F</mi></mrow><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></msub></mrow></math>”
-they are specifying that both the “refresh” and “next” steps make use
-of arithmetic over finite Galois fields (more usually referred to as
-<math><mi>GF</mi><mo
-stretchy="false">(</mo><msup><mn>2</mn><mi>n</mi></msup><mo
-stretchy="false">)</mo></math> in crypto literature).
-<math><mi>n</mi></math> has to be large—section 6.1 of the paper
-suggests specific fields with
-<math><mi>n</mi><mo>=</mo><mn>489</mn></math>,
-<math><mi>579</mi></math>, and <math><mi>705</mi></math>. I am
-informed that such arithmetic is “awful” to implement in software, not
-just difficult but risking side-channel attacks if not done perfectly,
-and often quite slow.
+over $\mathbb{F}_{2^n}$” they are specifying that both the “refresh”
+and “next” steps make use of arithmetic over finite Galois fields
+(more usually referred to as $\operatorname{GF}(2^n)$ in crypto
+literature).  $n$ has to be large—section 6.1 of the paper suggests
+specific fields with $n$ = 489, 579, and 705. I am informed that such
+arithmetic is “awful” to implement in software, not just difficult but
+risking side-channel attacks if not done perfectly, and often quite
+slow.
 
 Both problems arise from the same source, namely wanting to build the
 algorithm around a keyed hash so that the entropy extractor is fully
