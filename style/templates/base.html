@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--[if lt IE 9]><script src="/{{ THEME_STATIC_DIR }}/html5shiv.js"></script><![endif]-->
     {% assets filters="cssmin", output="style.min.css",
-              "f/MostraNuova-Regular.css", "normalize.css", "main.css" %}
+              "f/MostraNuova-Regular.css", "normalize.css", "main.css",
+              "highlighting.css" %}
     <link rel="stylesheet" href="/{{ ASSET_URL }}">
     {% endassets %}
     {% block head %}
@@ -65,7 +66,7 @@
       <a href="http://creativecommons.org/licenses/by-nc/4.0/"
          ><img width="80" height="15" src="/s/cc-by-nc-4-80x15.png"
                alt="[(cc) BY-NC]"></a>
-      Posts © <address class="vcard"><a href="/about/" class="url fn">Zack Weinberg</a></address>,
+      Posts © <address class="vcard"><a href="//www.owlfolio.org/about/" class="url fn">Zack Weinberg</a></address>,
       reusable according to the terms of the
       <a href="http://creativecommons.org/licenses/by-nc/4.0/"
          rel="license">Creative Commons Attribution-Noncommercial 4.0 license</a>.

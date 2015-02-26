@@ -97,15 +97,16 @@ then pick that hash for its practical utility.
 ... Oddly enough, this hypothetical construction looks an awful lot
 like the existing Linux CSPRNG.
 
-    @inproceedings{dodis2013,
-      author =       {Dodis, Yevgeniy and Pointcheval, David and
-                      Ruhault, Sylvain and Vergnaud, Damien and
-                      Wichs, Daniel},
-      title =        {{Security Analysis of Pseudo-Random Number
-                      Generators with Input: \texttt{/dev/random}
-                      is not Robust}},
-      booktitle =    {Computer and Communication Security},
-      year =         2013,
-      url =          {http://eprint.iacr.org/2013/338}
-    }
-
+~~~~ {.bibtex}
+@inproceedings{dodis2013,
+  author =       {Dodis, Yevgeniy and Pointcheval, David and
+                  Ruhault, Sylvain and Vergnaud, Damien and
+                  Wichs, Daniel},
+  title =        {{Security Analysis of Pseudo-Random Number
+                  Generators with Input: \texttt{/dev/random}
+                  is not Robust}},
+  booktitle =    {Computer and Communication Security},
+  year =         2013,
+  url =          {http://eprint.iacr.org/2013/338}
+}
+~~~~

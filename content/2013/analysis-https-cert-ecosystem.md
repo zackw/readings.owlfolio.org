@@ -68,13 +68,15 @@ at the mountain of technical debt and/or at features that are _even
 more_ overdue. (*cough* TLS 1.1) This, though, we know how to fix. It
 only takes money.
 
-    @inproceedings{durumeric2013,
-      author =       {Durumeric, Zakir and Kasten, James and Bailey,
-                      Michael and Halderman, J. Alex},
-      title =        {{Analysis of the HTTPS Certificate Ecosystem}},
-      booktitle =    {Internet Measurement Conference},
-      pages =        {291--304},
-      year =         2013,
-      doi =          {10.1145/2504730.2504755},
-      url =          {https://jhalderm.com/pub/papers/https-imc13.pdf}
-    }
+~~~~ {.bibtex}
+@inproceedings{durumeric2013,
+  author =       {Durumeric, Zakir and Kasten, James and Bailey,
+                  Michael and Halderman, J. Alex},
+  title =        {{Analysis of the HTTPS Certificate Ecosystem}},
+  booktitle =    {Internet Measurement Conference},
+  pages =        {291--304},
+  year =         2013,
+  doi =          {10.1145/2504730.2504755},
+  url =          {https://jhalderm.com/pub/papers/https-imc13.pdf}
+}
+~~~~
