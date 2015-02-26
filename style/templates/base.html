@@ -1,4 +1,4 @@
-{% from "macros.html" import category_list, recent_posts, outbound_links, topbar %}
+{% from "macros.html" import category_list, tag_list, outbound_links, topbar %}
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
   <head>
@@ -51,11 +51,7 @@
 
     <div id="sidebars">
       {% block siteindex %}
-      {% if all_articles %}
-      {{ recent_posts(all_articles, RECENT_POSTS_LENGTH) }}
-      {% else %}
-      {{ recent_posts(articles, RECENT_POSTS_LENGTH) }}
-      {% endif %}
+      {{ tag_list(tag_cloud, TAGS_UPPERCASE) }}
       {{ category_list(categories) }}
       {% endblock %}
       {% block blogroll %}

@@ -3,10 +3,10 @@
 from __future__ import unicode_literals
 
 # Uncomment to disable caching temporarily (for heavy theme/plugin development)
-#CACHE_CONTENT = False
+CACHE_CONTENT = False
 
 AUTHOR              = u'Zack Weinberg'
-SITENAME            = u'Owl\u2019s Portfolio: Readings'
+SITENAME            = u'Readings in Information Security'
 SITEURL             = ''
 TIMEZONE            = 'America/New_York'
 DEFAULT_DATE        = 'fs'
@@ -16,7 +16,7 @@ DEFAULT_PAGINATION  = 10
 RELATIVE_URLS       = True
 
 PATH                = 'content'
-PAGE_PATHS          = []
+PAGE_PATHS          = ['pages']
 STATIC_PATHS        = ['',]
 IGNORE_FILES        = ['.#*', '*~', '#*#']
 ARTICLE_EXCLUDES    = []
@@ -30,13 +30,14 @@ PAGE_URL            = '{slug}/'
 PAGE_SAVE_AS        = '{slug}/index.html'
 CATEGORY_URL        = '{slug}/'
 CATEGORY_SAVE_AS    = '{slug}/index.html'
+TAG_URL             = 't/{slug}/'
+TAG_SAVE_AS         = 't/{slug}/index.html'
 
 AUTHOR_SAVE_AS      = ''
-TAG_SAVE_AS         = ''
 ARCHIVES_SAVE_AS    = ''
 AUTHORS_SAVE_AS     = ''
 CATEGORIES_SAVE_AS  = ''
-TAGS_SAVE_AS        = ''
+TAGS_SAVE_AS        = 't/index.html'
 
 PAGINATION_PATTERNS = [
     (1, '{base_name}/', '{base_name}/index.html'),
@@ -68,16 +69,17 @@ SITEMAP             = { 'format': 'xml' }
 
 # Outbound top-menu links.
 MENUITEMS = [
-    ('About',        'https://www.owlfolio.org/about/',      'left'),
-    ('Contact',      'https://www.owlfolio.org/contact/',    'left'),
-    ('Publications', 'https://hacks.owlfolio.org/pubs/',     'left'),
-    ('Hacks',        'https://hacks.owlfolio.org/',          'right'),
-    ('Readings',     'https://readings.owlfolio.org/',       'right'),
-    ('Photography',  'https://www.flickr.com/zackw/photos/', 'right')
+    ('Contact',         'https://www.owlfolio.org/contact/',    'left'),
+    ('Owl’s Portfolio', 'https://www.owlfolio.org/',         'left'),
+    ('Hacks',           'https://hacks.owlfolio.org/',          'right'),
+    ('Publications',    'https://hacks.owlfolio.org/pubs/',     'right'),
+    ('Photography',     'https://www.flickr.com/zackw/photos/', 'right')
 ]
 
-# Recent-posts widget
-RECENT_POSTS_LENGTH = 5
+# Tag cloud
+TAG_CLOUD_STEPS     = 4
+TAG_CLOUD_MAX_ITEMS = 20
+TAGS_UPPERCASE      = ['pki', 'https']
 
 # Blogroll
 BLOGROLL = [
@@ -239,3 +241,7 @@ AUTHOR_FEED_RSS = None
 EXTRA_PATH_METADATA = {
     '../meta/favicon.ico' : { 'path': 'favicon.ico' },
 }
+
+# If assets is allowed to run in debug mode, it puts the CSS files in
+# the wrong place, breaking links to subresources.
+ASSET_DEBUG = False

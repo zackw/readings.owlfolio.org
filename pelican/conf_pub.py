@@ -20,6 +20,7 @@ FEED_DOMAIN        = SITEURL
 FEED_MAX_ITEMS     = DEFAULT_PAGINATION
 FEED_ALL_ATOM      = 'index.atom'
 CATEGORY_FEED_ATOM = '%s/index.atom'
+TAG_FEED_ATOM      = '%s/index.atom'
 
 PLUGINS.extend(['gzip_cache'])
 STATIC_PATHS.append('../meta')

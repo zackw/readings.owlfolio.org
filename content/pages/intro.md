@@ -4,8 +4,8 @@ Date: 2013-10-17
 I'm a graduate student in computer security, so I read lots and lots
 of papers.
 
-<a href="http://www.flickr.com/photos/zackw/8285179152/" title="My
-desk, about as organized as it ever gets."><img
+<a href="http://www.flickr.com/photos/zackw/8285179152/"
+title="My desk, about as organized as it ever gets."><img
 src="https://farm9.staticflickr.com/8363/8285179152_774dbb72cb.jpg"
 width="500" height="375" alt="My desk, about as organized as it ever
 gets."></a>

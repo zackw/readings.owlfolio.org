@@ -47,7 +47,7 @@
 
 {% macro category_list(categories) %}
 <nav class="index widget">
-  <h3>Topics</h3>
+  <h3>Publication Years</h3>
   <ul>
     {% for category, articles in categories|sort %}
     <li><a href="/{{ category.url }}">{{ category }}</a></li>
@@ -56,19 +56,25 @@
 </nav>
 {% endmacro %}
 
-{% macro recent_posts(articles, n) %}
-{% set m = articles|length        -%}
-{% if m < n                       -%}
-{%   set n = m                    -%}
-{% endif                          -%}
+{% macro tag_list(tag_cloud, uppercase) %}
 <nav class="index widget">
-  <h3>Recent Posts</h3>
+  <h3>Article topics</h3>
   <ul>
-    {% for i in range(n) %}
-    <li><a href="/{{ articles[i].url }}">{{ articles[i].title }}</a></li>
+    {% for tag in tag_cloud %}
+    <li class="tag-{{ tag.1 }}"><a href="/{{ tag.0.url }}"
+     >{{ tag_name(tag.0, uppercase) }}</a></li>
     {% endfor %}
+    <li class="tag-1"><a href="/t/">More...</a></li>
   </ul>
 </nav>
+{% endmacro %}
+
+{% macro tag_name(tag, uppercase) -%}
+{% if tag.name in uppercase -%}
+{{ tag | upper -}}
+{% else -%}
+{{ tag | capitalize -}}
+{% endif -%}
 {% endmacro %}
 
 {% macro outbound_links(section_title, links, attrs='') %}
