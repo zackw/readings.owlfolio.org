@@ -51,14 +51,12 @@
     </div><!-- #main -->
 
     <div id="sidebars">
+      <nav class="widget">
+      <h3><a href="//www.owlfolio.org/">« Owl’s Portfolio</a></h3>
+      </nav>
       {% block siteindex %}
       {{ tag_list(tag_cloud, TAGS_UPPERCASE) }}
       {{ category_list(categories) }}
-      {% endblock %}
-      {% block blogroll %}
-      {% for section_title, attrs, links in BLOGROLL %}
-      {{ outbound_links(section_title, links, attrs) }}
-      {% endfor %}
       {% endblock %}
     </div><!-- #sidebars -->
 

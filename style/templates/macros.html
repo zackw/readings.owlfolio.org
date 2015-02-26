@@ -47,7 +47,7 @@
 
 {% macro category_list(categories) %}
 <nav class="index widget">
-  <h3>Publication Years</h3>
+  <h3>Publication years</h3>
   <ul>
     {% for category, articles in categories|sort %}
     <li><a href="/{{ category.url }}">{{ category }}</a></li>
