@@ -1,22 +1,31 @@
-(function (document) {
+// Load MathJax as a polyfill if there are any <math> elements on the page.
+(function (d, w) {
     "use strict";
-
-    function maybeLoadMathML () {
-        var findMath = document.getElementsByTagName("math");
-        var cfg, script;
-        if (findMath.length) {
-            cfg = document.createElement("script");
-            cfg.setAttribute("type", "text/x-mathjax-config");
-            cfg.appendChild(document.createTextNode(
-'MathJax.Hub.Config({extensions:["FontWarnings.js","MatchWebFonts.js"],"HTML-CSS":{preferredFont:"STIX",webFont:"STIX-Web",imageFont:null},FontWarnings:{webFont:null},MathMenu:{showLocale:false}})'));
-            document.body.appendChild(cfg);
-
-            script = document.createElement("script");
-            script.async = true;
-            script.src = "/s/MathJax.48b594af/MathJax.js?config=MML_HTMLorMML.js";
-            document.body.appendChild(script);
+    d.addEventListener('DOMContentLoaded', function () {
+        var s;
+        if (d.getElementsByTagName("math").length) {
+            w.MathJax = {
+                config: ["MML_HTMLorMML.js"],
+                extensions: ["FontWarnings.js", "MatchWebFonts.js"],
+                "HTML-CSS": {
+                    preferredFont: "STIX",
+                    webFont: "STIX-Web",
+                    imageFont: null
+                },
+                FontWarnings: { webFont:null },
+                MathMenu: {showLocale: false },
+                // This is the only way to remove SVG from the renderer submenu.
+                AuthorInit: function () {
+                  MathJax.Hub.Register.StartupHook("MathMenu Ready",function () {
+                    MathJax.Menu.menu.Find("Math Settings","Math Renderer","SVG")
+                      .hidden = true;
+                  });
+                }
+            };
+            s = d.createElement("script");
+            s.async = true;
+            s.src = "//hacks.owlfolio.org/s/MathJax.48b594af/MathJax.js";
+            d.body.appendChild(s);
         }
-    }
-
-    document.addEventListener('DOMContentLoaded', maybeLoadMathML);
-})(document);
+    });
+})(document, window);
