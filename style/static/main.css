@@ -283,14 +283,14 @@ section.comment {
 
 /* Overall layout */
 body {
-  background: url("chevrons.svg") #e0e6ea;
+  background: url("chevrons.svg") #e4eae1;
 }
 
 #main {
   max-width: 48em;
   line-height: 1.3;
   padding: 0.1px 1em;
-  background-color: #f0f3f4;
+  background-color: #f2f4f0;
   background-clip: padding-box;
   border-width: 18px 0 0 18px;
   border-style: solid;
@@ -321,9 +321,10 @@ body {
   position: relative; /* abspos container */
 }
 #brand {
+  font-size: 2.4em;
+  line-height: 1;
   margin-top: 0;
-  margin-bottom: 1.25em;
-  font-size: 3em;
+  margin-bottom: 2em;
 }
 .topbar-left, .topbar-right {
   margin: 0;
@@ -341,9 +342,6 @@ body {
 }
 
 @media screen and (max-width: 273px) {
-  #brand {
-    text-align: center;
-  }
   .topbar-right {
     left: auto;
     right: 0.625em;
@@ -356,6 +354,11 @@ body {
     border-image-width: 18px 0 0 0;
   }
 }
+@media screen and (max-width: 470px) {
+  #brand {
+    text-align: center;
+  }
+}
 @media screen and (min-width: 768px) {
   @supports (flex-wrap: wrap) {
     body {
@@ -366,7 +369,7 @@ body {
          banner itself. */
       background: url("cbot-owl.svg") 7px 6px no-repeat,
                   url("chevrons.svg"),
-                  #e0e6ea;
+                  #e4eae1;
     }
     #banner, #content-info {
       flex: 1 100%;
