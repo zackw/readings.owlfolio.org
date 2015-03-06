@@ -19,7 +19,7 @@ SERVER_HELPER  = $(BASEDIR)/pelican/server-helper
 SSH_HOST       = of-readings
 SSH_PORT       = 22
 SSH_USER       =
-SSH_TARGET_DIR = .
+SSH_TARGET_DIR = html/
 
 ifeq ($(SSH_USER),)
 SSH_DESTINATION :=             $(SSH_HOST):$(SSH_TARGET_DIR)
