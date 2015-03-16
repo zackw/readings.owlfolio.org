@@ -1,5 +1,5 @@
 Title: Security Analysis of Pseudo-Random Number Generators with Input
-Date: 2013-10-24
+Date: 2015-03-15
 Tags: theory, random number generation
 
 Coming up in this year’s [CCS](http://www.sigsac.org/ccs/CCS2013/) is
