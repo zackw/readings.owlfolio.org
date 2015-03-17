@@ -79,7 +79,7 @@ MENUITEMS = [
 # Tag cloud
 TAG_CLOUD_STEPS     = 4
 TAG_CLOUD_MAX_ITEMS = 20
-TAGS_UPPERCASE      = ['pki', 'https']
+TAGS_UPPERCASE      = ['pki', 'https', 'bgp']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
