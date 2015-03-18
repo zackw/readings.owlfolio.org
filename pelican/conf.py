@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 # Uncomment to disable caching temporarily (for heavy theme/plugin development)
-CACHE_CONTENT = False
+#CACHE_CONTENT = False
 
 AUTHOR              = u'Zack Weinberg'
 SITENAME            = u'Readings in Information Security'
