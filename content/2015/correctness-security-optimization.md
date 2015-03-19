@@ -1,6 +1,6 @@
 Title: The Correctness-Security Gap in Compiler Optimization
 Date: 2015-03-16
-Tags: langsec, optimization, formal models
+Tags: langsec, optimization, formal models, theory
 
 At this year's [LangSec Workshop][], a paper on formal analysis of
 cases where compiled-code optimizations can introduce security holes

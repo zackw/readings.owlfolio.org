@@ -1,6 +1,6 @@
 Title: Anonymity on QuickSand: Using BGP to Compromise Tor
 Date: 2015-03-17
-Tags: bgp, tor, traffic analysis, autonomous systems
+Tags: bgp, tor, traffic analysis, autonomous systems, routing
 
 One of the oldest research threads regarding [Tor][] is trying to
 figure out how close you could get in real life to the "global passive
@@ -14,7 +14,7 @@ small number of direct "peers", so a stream of packets will normally
 pass through many different ASes on the way to its destination.  It's
 well-known that AS-operated backbone routers are in an excellent
 position to mount traffic-correlation attacks on Tor, particularly if
-they collude [[1][]] [[2][]].  The key observation in *this* paper is
+they collude [[1]][] [[2]][].  The key observation in *this* paper is
 that, by manipulating BGP, a malicious AS can observe traffic that
 wouldn't naturally flow through it.
 
@@ -25,7 +25,7 @@ forwarding packets to a "prefix" (set of IP addresses) and the rest of
 the network will believe it.  Incidents where traffic is temporarily
 redirected to an AS that either can't get it to the destination at
 all, or can only do so suboptimally, are commonplace, and people argue
-about how malicious these are. [[3][]] [[4][]] [[5][]] Suppose an
+about how malicious these are. [[3]][] [[4]][] [[5]][] Suppose an
 adversary can observe one end of a Tor circuit---perhaps they control
 the ISP for a Tor client.  They also have some reason to suspect a
 particular destination for the traffic.  They use BGP to hijack
@@ -51,7 +51,7 @@ happen, and stop happening, in a matter of minutes.  I don't see a
 Unfortunately, routing protocols that do *not* assume honest
 participants are still a topic of basic research.  (I may get to some
 of those papers eventually.)  There are proposals for adding a notion
-of "this AS is authorized to announce this prefix" to BGP [[6][]] but
+of "this AS is authorized to announce this prefix" to BGP [[6]][] but
 those have all the usual problems with substituting "I trust this
 organization" for "I have verified that this data is accurate".
 
@@ -59,12 +59,12 @@ organization" for "I have verified that this data is accurate".
 [HotNets 2014]: http://conferences.sigcomm.org/hotnets/2014/index.html
 [autonomous systems]: https://en.wikipedia.org/wiki/Autonomous_system_%28Internet%29
 [BGP]: https://en.wikipedia.org/wiki/Border_Gateway_Protocol
-[1]: http://freehaven.net/anonbib/full/topic.html#feamster:wpes2004
-[2]: http://freehaven.net/anonbib/full/topic.html#ccs2013-usersrouted
-[3]: http://www.arbornetworks.com/asert/2008/02/internet-routing-insecuritypakistan-nukes-youtube/
-[4]: http://www.arbornetworks.com/asert/2010/11/china-hijacks-15-of-internet-traffic/
-[5]: http://www.bgpmon.net/bgp-routing-incidents-in-2014-malicious-or-not/
-[6]: http://www.bgpmon.net/securing-bgp-routing-with-rpki-and-roas/
+[[1]]: http://freehaven.net/anonbib/full/topic.html#feamster:wpes2004
+[[2]]: http://freehaven.net/anonbib/full/topic.html#ccs2013-usersrouted
+[[3]]: http://www.arbornetworks.com/asert/2008/02/internet-routing-insecuritypakistan-nukes-youtube/
+[[4]]: http://www.arbornetworks.com/asert/2010/11/china-hijacks-15-of-internet-traffic/
+[[5]]: http://www.bgpmon.net/bgp-routing-incidents-in-2014-malicious-or-not/
+[[6]]: http://www.bgpmon.net/securing-bgp-routing-with-rpki-and-roas/
 
 
 ~~~~ {.bibtex}
