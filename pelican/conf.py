@@ -14,6 +14,7 @@ DEFAULT_DATE_FORMAT = '%-d %B %Y'
 DEFAULT_LANG        = u'en'
 DEFAULT_PAGINATION  = 10
 RELATIVE_URLS       = True
+SUMMARY_MAX_LENGTH  = None
 
 PATH                = 'content'
 PAGE_PATHS          = ['pages']
@@ -44,25 +45,15 @@ PAGINATION_PATTERNS = [
     (2, '{base_name}/{number}/', '{base_name}/{number}/index.html'),
 ]
 
-PLUGIN_PATHS        = ['plugins']
+PLUGIN_PATHS        = ['../../pelican-plugins']
 PLUGINS             = ['assets',
                        'neighbors',
                        'sitemap',
-                       'summary',
-                       'read_more_link',
                        'category_meta',
                        'pandoc_reader']
 
 PANDOC_ARGS         = ['--smart', '--normalize', '--html-q-tags', '--mathml']
 PANDOC_EXTENSIONS   = ['-citations']
-
-# Setting SUMMARY_MAX_LENGTH to None breaks read_more_link.
-# The <span> around the space and link is necessary because
-# read_more_link will only insert _one element_.
-SUMMARY_MAX_LENGTH    = 1e10
-SUMMARY_END_MARKER    = '<!--more-->'
-READ_MORE_LINK        = '(Continued…)'
-READ_MORE_LINK_FORMAT = '<span> <a class="read-more" href="/{url}">{text}</a></span>'
 
 # This is the default, but it complains if you don't set it explicitly.
 SITEMAP             = { 'format': 'xml' }
