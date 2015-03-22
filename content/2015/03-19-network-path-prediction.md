@@ -1,5 +1,5 @@
 Title: Defending Tor from Network Adversaries: A Case Study of Network Path Prediction
-Date: 2015-03-19
+Category: 2015
 Tags: tor, routing, autonomous systems, traffic analysis, traceroute
 
 In a similar vein as

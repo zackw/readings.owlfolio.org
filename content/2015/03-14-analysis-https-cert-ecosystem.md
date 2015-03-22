@@ -1,5 +1,5 @@
 Title: Analysis of the HTTPS Certificate Ecosystem
-Date: 2015-03-14
+Category: 2013
 Tags: pki, https, field observations
 
 Hot off the presses (as it were), this year’s

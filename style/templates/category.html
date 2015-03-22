@@ -1,11 +1,11 @@
 {% extends "index.html" %}
-{% block title %}
-{{ category.description|striptags -}}
+{% block title -%}
+Articles published in {{ category.name|striptags -}}
 {% if articles_page and articles_page.has_previous() -%}
 , page {{ articles_page.number }}{% endif %} | {{ SITENAME -}}
 {% endblock %}
 {% block content_title %}
 <header class="post-header">
-  <h1>{{ category.description }}</h1>
+  <h1>Articles published in {{ category.name }}</h1>
 </header>
 {% endblock %}

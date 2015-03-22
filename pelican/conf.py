@@ -5,13 +5,14 @@ from __future__ import unicode_literals
 # Uncomment to disable caching temporarily (for heavy theme/plugin development)
 #CACHE_CONTENT = False
 
-AUTHOR              = u'Zack Weinberg'
-SITENAME            = u'Readings in Information Security'
+AUTHOR              = 'Zack Weinberg'
+SITENAME            = 'Readings in Information Security'
 SITEURL             = ''
 TIMEZONE            = 'America/New_York'
-DEFAULT_DATE        = 'fs'
+DEFAULT_DATE        = None
+PATH_METADATA       = '^(?P<date>\d{4}/\d{2}-\d{2})-(?P<slug>[^.]+)'
 DEFAULT_DATE_FORMAT = '%-d %B %Y'
-DEFAULT_LANG        = u'en'
+DEFAULT_LANG        = 'en'
 DEFAULT_PAGINATION  = 10
 RELATIVE_URLS       = True
 SUMMARY_MAX_LENGTH  = None
@@ -49,7 +50,6 @@ PLUGIN_PATHS        = ['../../pelican-plugins']
 PLUGINS             = ['assets',
                        'neighbors',
                        'sitemap',
-                       'category_meta',
                        'pandoc_reader']
 
 PANDOC_ARGS         = ['--smart', '--normalize', '--html-q-tags', '--mathml']
