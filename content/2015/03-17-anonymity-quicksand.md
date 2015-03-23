@@ -1,6 +1,8 @@
-Title: Anonymity on QuickSand: Using BGP to Compromise Tor
-Category: 2014
-Tags: bgp, tor, traffic analysis, autonomous systems, routing
+---
+Title: "Anonymity on QuickSand: Using BGP to Compromise Tor"
+Category: "2014"
+Tags: [bgp, tor, traffic analysis, autonomous systems, routing]
+...
 
 One of the oldest research threads regarding [Tor][] is trying to
 figure out how close you could get in real life to the "global passive

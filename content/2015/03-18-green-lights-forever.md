@@ -1,6 +1,8 @@
-Title: Green Lights Forever: Analyzing the Security of Traffic Infrastructure
-Category: 2014
-Tags: embedded, safety-critical, security phase change
+---
+Title: "Green Lights Forever: Analyzing the Security of Traffic Infrastructure"
+Category: "2014"
+Tags: [embedded, safety-critical, security phase change]
+...
 
 Consider the humble traffic light.  The basic design dates to the
 1890s, the signals it displays can be explained to a toddler, they're

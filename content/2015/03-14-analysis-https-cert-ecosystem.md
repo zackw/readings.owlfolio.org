@@ -1,6 +1,8 @@
+---
 Title: Analysis of the HTTPS Certificate Ecosystem
-Category: 2013
-Tags: pki, https, field observations
+Category: "2013"
+Tags: [pki, https, field observations]
+...
 
 Hot off the presses (as it were), this year’s
 _[Internet Measurement Conference](http://conferences.sigcomm.org/imc/2013/)_

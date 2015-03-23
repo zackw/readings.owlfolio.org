@@ -1,6 +1,8 @@
-Title: Security Analysis of Pseudo-Random Number Generators with Input
-Category: 2013
-Tags: theory, random number generation
+---
+Title: "Security Analysis of Pseudo-Random Number Generators with Input"
+Category: "2013"
+Tags: [theory, random number generation]
+...
 
 Coming up in this year’s [CCS](http://www.sigsac.org/ccs/CCS2013/) is
 a paper with the provocative subtitle “[`/dev/random` is not

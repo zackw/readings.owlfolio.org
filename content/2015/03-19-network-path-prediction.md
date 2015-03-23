@@ -1,6 +1,9 @@
-Title: Defending Tor from Network Adversaries: A Case Study of Network Path Prediction
-Category: 2015
-Tags: tor, routing, autonomous systems, traffic analysis, traceroute
+---
+Title: "Defending Tor from Network Adversaries:
+        A Case Study of Network Path Prediction"
+Category: "2015"
+Tags: [tor, routing, autonomous systems, traffic analysis, traceroute]
+...
 
 In a similar vein as
 [Tuesday's paper](/2014/anonymity-on-quicksand-using-bgp-to-compromise-tor/),
