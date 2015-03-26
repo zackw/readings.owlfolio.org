@@ -5,17 +5,19 @@ from __future__ import unicode_literals
 # Uncomment to disable caching temporarily (for heavy theme/plugin development)
 #CACHE_CONTENT = False
 
-AUTHOR              = 'Zack Weinberg'
-SITENAME            = 'Readings in Information Security'
-SITEURL             = ''
-TIMEZONE            = 'America/New_York'
-DEFAULT_DATE        = None
-PATH_METADATA       = '^(?P<date>\d{4}/\d{2}-\d{2})-(?P<slug>[^.]+)'
-DEFAULT_DATE_FORMAT = '%-d %B %Y'
-DEFAULT_LANG        = 'en'
-DEFAULT_PAGINATION  = 10
-RELATIVE_URLS       = True
-SUMMARY_MAX_LENGTH  = None
+AUTHOR                 = 'Zack Weinberg'
+SITENAME               = 'Readings in Information Security'
+SITEURL                = ''
+TIMEZONE               = 'America/New_York'
+DEFAULT_DATE           = None
+PATH_METADATA          = '^(?P<date>\d{4}/\d{2}-\d{2})-(?P<slug>[^.]+)'
+DEFAULT_DATE_FORMAT    = '%-d %B %Y'
+DEFAULT_LANG           = 'en'
+DEFAULT_PAGINATION     = 10
+RELATIVE_URLS          = True
+SUMMARY_MAX_LENGTH     = None
+USE_FOLDER_AS_CATEGORY = False
+DEFAULT_CATEGORY       = 'ERROR.CATEGORY.NOT.SET'
 
 PATH                = 'content'
 PAGE_PATHS          = ['pages']
@@ -46,14 +48,15 @@ PAGINATION_PATTERNS = [
     (2, '{base_name}/{number}/', '{base_name}/{number}/index.html'),
 ]
 
-PLUGIN_PATHS        = ['../../pelican-plugins']
+PLUGIN_PATHS        = ['../../pelican-plugins', 'local-plugins']
 PLUGINS             = ['assets',
                        'neighbors',
                        'sitemap',
-                       'pandoc_reader']
+                       'pandoc_reader',
+                       'bibliog']
 
 PANDOC_ARGS         = ['--smart', '--normalize', '--html-q-tags', '--mathml']
-PANDOC_EXTENSIONS   = ['-citations']
+PANDOC_EXTENSIONS   = ['-citations', '-mmd_title_block']
 
 # This is the default, but it complains if you don't set it explicitly.
 SITEMAP             = { 'format': 'xml' }

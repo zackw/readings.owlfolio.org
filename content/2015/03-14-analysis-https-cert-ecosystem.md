@@ -1,14 +1,24 @@
 ---
-Title: Analysis of the HTTPS Certificate Ecosystem
-Category: "2013"
-Tags: [pki, https, field observations]
+title: Analysis of the HTTPS Certificate Ecosystem
+tags: [pki, https, field observations]
+authors:
+ - Durumeric, Zakir
+ - Kasten, James
+ - Bailey, Michael
+ - Halderman, J. Alex
+year: 2013
+bibtex_type: inproceedings
+booktitle: Internet Measurement Conference
+booktitle_url: http://conferences.sigcomm.org/imc/2013/
+pages: 291--304
+organization: ACM SIGCOMM
+doi: 10.1145/2504730.2504755
+url: https://jhalderm.com/pub/papers/https-imc13.pdf
 ...
 
-Hot off the presses (as it were), this year’s
+The
 _[Internet Measurement Conference](http://conferences.sigcomm.org/imc/2013/)_
-brings us “[Analysis of the HTTPS Certificate
-Ecosystem](https://jhalderm.com/pub/papers/https-imc13.pdf),”
-an attempt to figure out just how
+brings us an attempt to figure out just how
 [X.509 server certificates](http://www.digicert.com/ssl.htm) are being
 used “in the wild,” specifically for HTTPS servers. Yet more
 specifically, they are looking for endemic operational problems that
@@ -69,16 +79,3 @@ on them, and the brave souls who do it anyway are busy chipping away
 at the mountain of technical debt and/or at features that are _even
 more_ overdue. (*cough* TLS 1.1) This, though, we know how to fix. It
 only takes money.
-
-~~~~ {.bibtex}
-@inproceedings{durumeric2013,
-  author =       {Durumeric, Zakir and Kasten, James and Bailey,
-                  Michael and Halderman, J. Alex},
-  title =        {{Analysis of the HTTPS Certificate Ecosystem}},
-  booktitle =    {Internet Measurement Conference},
-  pages =        {291--304},
-  year =         2013,
-  doi =          {10.1145/2504730.2504755},
-  url =          {https://jhalderm.com/pub/papers/https-imc13.pdf}
-}
-~~~~

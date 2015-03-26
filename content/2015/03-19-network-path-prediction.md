@@ -1,8 +1,18 @@
 ---
-Title: "Defending Tor from Network Adversaries:
+title: "Defending Tor from Network Adversaries:
         A Case Study of Network Path Prediction"
-Category: "2015"
-Tags: [tor, routing, autonomous systems, traffic analysis, traceroute]
+tags: [tor, routing, autonomous systems, traffic analysis, traceroute]
+authors:
+ - Juen, Joshua
+ - Das, Anupam
+ - Johnson, Aaron
+ - Borisov, Nikita
+ - Caesar, Matthew
+year: 2015
+bibtex_type: unpublished
+eprinttype: arXiv
+eprintclass: cs.CR
+eprint: 1410.1823
 ...
 
 In a similar vein as
@@ -84,17 +94,3 @@ easier to avoid overlap with the AS-path from exit to destination.
 [[5]]: http://pam2011.gatech.edu/papers/pam2011--Cunha.pdf
 [[6]]: http://researchcommons.waikato.ac.nz/bitstream/handle/10289/5018/Measured%20impact.pdf
 [[7]]: https://www.torproject.org/docs/faq#EntryGuards
-
-~~~~ {.bibtex}
-@preprint{juen.2015,
-  author =       {Juen, Joshua and Das, Anupam and Johnson, Aaron and
-                  Borisov, Nikita and Caesar, Matthew},
-  title =        {{Defending Tor from Network Adversaries: A Case Study
-                  of Network Path Prediction}},
-  year =         2015,
-  eprinttype =   {arXiv},
-  eprintclass =  {cs.CR},
-  eprint =       {1410.1823},
-  url =          {http://arxiv.org/abs/1410.1823}
-}
-~~~~

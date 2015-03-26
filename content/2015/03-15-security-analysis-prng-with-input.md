@@ -1,7 +1,21 @@
 ---
-Title: "Security Analysis of Pseudo-Random Number Generators with Input"
-Category: "2013"
-Tags: [theory, random number generation]
+title: Security Analysis of Pseudo-Random Number Generators with Input
+tags: [theory, random number generation]
+authors:
+ - Dodis, Yevgeniy
+ - Pointcheval, David
+ - Ruhault, Sylvain
+ - Vergnaud, Damien
+ - Wichs, Daniel
+year: 2013
+bibtex_type: inproceedings
+booktitle: Computer and Communications Security
+booktitle_url: http://www.sigsac.org/ccs/CCS2013/
+pages: 647--658
+organization: ACM SIGSAC
+doi: 10.1145/2508859.2516653
+eprinttype: IACR
+eprint: 2013/338
 ...
 
 Coming up in this year’s [CCS](http://www.sigsac.org/ccs/CCS2013/) is
@@ -102,17 +116,3 @@ then pick that hash for its practical utility.
 
 ... Oddly enough, this hypothetical construction looks an awful lot
 like the existing Linux CSPRNG.
-
-~~~~ {.bibtex}
-@inproceedings{dodis2013,
-  author =       {Dodis, Yevgeniy and Pointcheval, David and
-                  Ruhault, Sylvain and Vergnaud, Damien and
-                  Wichs, Daniel},
-  title =        {{Security Analysis of Pseudo-Random Number
-                  Generators with Input: \texttt{/dev/random}
-                  is not Robust}},
-  booktitle =    {Computer and Communication Security},
-  year =         2013,
-  url =          {http://eprint.iacr.org/2013/338}
-}
-~~~~

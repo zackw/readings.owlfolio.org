@@ -1,5 +1,6 @@
-Title: Introduction
-Date: 2013-10-17
+---
+title: Introduction
+...
 
 I'm a graduate student in computer security, so I read lots and lots
 of papers.

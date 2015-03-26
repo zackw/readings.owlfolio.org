@@ -1,7 +1,16 @@
 ---
-Title: "The Correctness-Security Gap in Compiler Optimization"
-Category: "2015"
-Tags: [langsec, optimization, formal models, theory]
+title: The Correctness-Security Gap in Compiler Optimization
+tags: [langsec, optimization, formal models, theory]
+authors:
+ - D'Silva, Vijay
+ - Payer, Mathias
+ - Song, Dawn
+year: 2015
+bibtex_type: inproceedings
+booktitle: Workshop on Language-Theoretic Security
+booktitle_url: http://spw15.langsec.org/index.html
+organization: IEEE
+url: http://nebelwelt.net/publications/15LangSec/CorrectnessSecurityGap-LangSec15.pdf
 ...
 
 At this year's [LangSec Workshop][], a paper on formal analysis of
@@ -144,14 +153,3 @@ about "[the death of optimizing compilers][]" there.
 [ETAPS 2015]: http://www.etaps.org/index.php/2015
 [DJB]: http://cr.yp.to/djb.html
 [the death of optimizing compilers]: http://blog.cr.yp.to/20150314-optimizing.html
-
-~~~~ {.bibtex}
-@inproceedings{dsilva.2015,
-  author =       {D'Silva, Vijay and Payer, Mathias and Song, Dawn},
-  title =        {{The Correctness-Security Gap in Compiler Optimization}},
-  booktitle =    {Workshop on Language-Theoretic Security},
-  year =         2015,
-  organization = {IEEE},
-  url =          {http://nebelwelt.net/publications/15LangSec/CorrectnessSecurityGap-LangSec15.pdf}
-}
-~~~~

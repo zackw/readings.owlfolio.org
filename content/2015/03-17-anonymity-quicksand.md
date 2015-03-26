@@ -1,7 +1,19 @@
 ---
-Title: "Anonymity on QuickSand: Using BGP to Compromise Tor"
-Category: "2014"
-Tags: [bgp, tor, traffic analysis, autonomous systems, routing]
+title: "Anonymity on QuickSand: Using BGP to Compromise Tor"
+tags: [bgp, tor, traffic analysis, autonomous systems, routing]
+authors:
+ - Vanbever, Laurent
+ - Li, Oscar
+ - Rexford, Jennifer
+ - Mittal, Prateek
+year: 2014
+bibtex_type: inproceedings
+booktitle: Hot Topics in Networks
+booktitle_url: http://conferences.sigcomm.org/hotnets/2014/
+organization: ACM SIGCOMM
+pages: 14:1--14:7
+doi: 10.1145/2670518.2673869
+url: http://conferences.sigcomm.org/hotnets/2014/papers/hotnets-XIII-final80.pdf
 ...
 
 One of the oldest research threads regarding [Tor][] is trying to
@@ -67,16 +79,3 @@ organization" for "I have verified that this data is accurate".
 [[4]]: http://www.arbornetworks.com/asert/2010/11/china-hijacks-15-of-internet-traffic/
 [[5]]: http://www.bgpmon.net/bgp-routing-incidents-in-2014-malicious-or-not/
 [[6]]: http://www.bgpmon.net/securing-bgp-routing-with-rpki-and-roas/
-
-
-~~~~ {.bibtex}
-@inproceedings{vanbever.2014,
-  author =       {Vanbever, Laurent and Li, Oscar and Rexford,
-                  Jennifer and Mittal, Prateek},
-  title =        {{Anonymity on QuickSand: Using BGP to Compromise Tor}},
-  booktitle =    {Hot Topics in Networks},
-  year =         2014,
-  organization = {ACM SIGCOMM},
-  url =          {http://conferences.sigcomm.org/hotnets/2014/papers/hotnets-XIII-final80.pdf}
-}
-~~~~

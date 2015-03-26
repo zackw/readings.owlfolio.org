@@ -1,7 +1,18 @@
 ---
-Title: "Green Lights Forever: Analyzing the Security of Traffic Infrastructure"
-Category: "2014"
-Tags: [embedded, safety-critical, security phase change]
+title: "Green Lights Forever: Analyzing the Security of Traffic Infrastructure"
+tags: [embedded, safety-critical, security phase change]
+authors:
+ - Ghena, Branden
+ - Beyer, William
+ - Hillaker, Allen
+ - Pevarnek, Jonathan
+ - Halderman, J. Alex
+year: 2014
+bibtex_type: inproceedings
+booktitle: Workshop on Offensive Technologies
+booktitle_url: https://www.usenix.org/conference/woot14
+organization: USENIX
+url: https://www.usenix.org/system/files/conference/woot14/woot14-ghena.pdf
 ...
 
 Consider the humble traffic light.  The basic design dates to the
@@ -80,16 +91,3 @@ to mess with the process controller.  I understand
 [jet engines are a service](http://www.geaviation.com/commercial/services/flight-efficiency-services/)
 now.  I would like to think that *those* engineers have thought about
 channel security, at the very least.
-
-~~~~ {.bibtex}
-@inproceedings{ghena.2014,
-  author =       {Ghena, Branden and Beyer, William and Hillaker, Allen
-                  and Pevarnek, Jonathan and Halderman, J. Alex},
-  title =        {{Green Lights Forever: Analyzing the Security of
-                   Traffic Infrastructure},
-  booktitle =    {Workshop on Offensive Technologies},
-  year =         2014,
-  organization = {USENIX},
-  url =          {https://www.usenix.org/system/files/conference/woot14/woot14-ghena.pdf}
-}
-~~~~

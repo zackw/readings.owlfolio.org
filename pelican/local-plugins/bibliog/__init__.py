@@ -1,0 +1,1 @@
+from .bibliog import register
