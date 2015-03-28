@@ -12,7 +12,7 @@ bibtex_type: inproceedings
 booktitle: Workshop on Offensive Technologies
 booktitle_url: https://www.usenix.org/conference/woot14
 organization: USENIX
-url: https://www.usenix.org/system/files/conference/woot14/woot14-ghena.pdf
+pdf_url: https://www.usenix.org/system/files/conference/woot14/woot14-ghena.pdf
 ...
 
 Consider the humble traffic light.  The basic design dates to the

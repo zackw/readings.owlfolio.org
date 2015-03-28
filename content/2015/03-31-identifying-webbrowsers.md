@@ -11,7 +11,7 @@ booktitle_url: https://www.cylab.cmu.edu/news_events/events/wpes2014/
 organization: ACM SIGSAC
 pages: 135--138
 doi: 10.1145/2665943.2665968
-url: http://www.cs.okstate.edu/~chantin/WPES2014.pdf
+pdf_url: http://www.cs.okstate.edu/~chantin/WPES2014.pdf
 ...
 
 If you are a website, it is fairly easy to identify the web browser in

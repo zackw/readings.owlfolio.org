@@ -10,7 +10,7 @@ bibtex_type: inproceedings
 booktitle: Workshop on Language-Theoretic Security
 booktitle_url: http://spw15.langsec.org/index.html
 organization: IEEE
-url: http://nebelwelt.net/publications/15LangSec/CorrectnessSecurityGap-LangSec15.pdf
+pdf_url: http://nebelwelt.net/publications/15LangSec/CorrectnessSecurityGap-LangSec15.pdf
 ...
 
 At this year's [LangSec Workshop][], a paper on formal analysis of

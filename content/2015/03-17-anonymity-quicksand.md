@@ -13,7 +13,7 @@ booktitle_url: http://conferences.sigcomm.org/hotnets/2014/
 organization: ACM SIGCOMM
 pages: 14:1--14:7
 doi: 10.1145/2670518.2673869
-url: http://conferences.sigcomm.org/hotnets/2014/papers/hotnets-XIII-final80.pdf
+pdf_url: http://conferences.sigcomm.org/hotnets/2014/papers/hotnets-XIII-final80.pdf
 ...
 
 One of the oldest research threads regarding [Tor][] is trying to

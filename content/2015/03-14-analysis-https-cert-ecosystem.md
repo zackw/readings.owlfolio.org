@@ -13,7 +13,7 @@ booktitle_url: http://conferences.sigcomm.org/imc/2013/
 pages: 291--304
 organization: ACM SIGCOMM
 doi: 10.1145/2504730.2504755
-url: https://jhalderm.com/pub/papers/https-imc13.pdf
+pdf_url: https://jhalderm.com/pub/papers/https-imc13.pdf
 ...
 
 The
