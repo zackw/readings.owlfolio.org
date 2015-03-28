@@ -77,5 +77,4 @@ they never get implemented: why?  Well, you ask me, I say it’s because
 both OpenSSL and NSS are such terrible code that nobody wants to hack
 on them, and the brave souls who do it anyway are busy chipping away
 at the mountain of technical debt and/or at features that are _even
-more_ overdue. (*cough* TLS 1.1) This, though, we know how to fix. It
-only takes money.
+more_ overdue. This, though, we know how to fix. It only takes money.
