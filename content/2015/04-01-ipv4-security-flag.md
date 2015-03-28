@@ -8,16 +8,15 @@ eprinttype: rfc
 eprint: 3514
 ...
 
-This post is going to be more general-audience-friendly than usual.
 Today I propose to explain a classic joke---or perhaps I should call
 it a parable instead.
 
-[RFC 3514][] steals a bit from the IPv4 fragment offset field and
-redefines it as the "evil bit": packets with malicious intent [MUST][]
-set that bit, benign packets [MUST NOT][] set it.  It follows that a
-firewall router can protect its network from all attacks by dropping
-packets with the evil bit set (and the RFC requires them to do so).
-Yay!  Network security is solved, we can all go home!
+[RFC 3514][] defines a bit in the IPv4 packet header as the "evil
+bit": packets with malicious intent [MUST][] set that bit, benign
+packets [MUST NOT][] set it.  It follows that a firewall router can
+protect its network from all attacks by dropping packets with the evil
+bit set (and the RFC requires them to do so).  Yay!  Network security
+is solved, we can all go home!
 
 From the fact that we are all still chained to our desks twelve years
 later, you may deduce that network security is *not* solved.  The flaw
@@ -60,12 +59,13 @@ difference between *my* public key, truthfully labeled with my name
 and address, and Mallory's public key, which is *also* labeled with my
 name and address, because nothing stops Mallory from doing that if
 Mallory wants.  How do you tell the difference?  Well, you can look at
-https://www.owlfolio.org/contact/ where I have posted a string of
-hexadecimal called the "fingerprint" of my public key, and
-painstakingly compare that to the fingerprint of the key you just
-pulled off the PGP keyservers, and---wait a minute, how do you know
-that's *my* website you're looking at?  How do you know Mallory hasn't
-modified the fingerprint, and carefully left everything else alone?
+[`https://www.owlfolio.org/contact/`](https://www.owlfolio.org/contact/)
+where I have posted a string of hexadecimal called the "fingerprint"
+of my public key, and painstakingly compare that to the fingerprint of
+the key you just pulled off the PGP keyservers, and---wait a minute,
+how do you know that's *my* website you're looking at?  How do you
+know Mallory hasn't modified the fingerprint, and carefully left
+everything else alone?
 
 Well, it's an HTTPS website, so every page has a digital signature
 that the browser verifies for you, and you can click on the lock icon
@@ -94,20 +94,20 @@ most of what people talk about on the phone is useless to him, even
 when those people are murderers, so he only listens in when he's sure
 he will hear something that will help one of his cases.
 
-The F.B.I. also employs [Special Agent Sullivan][].  Sullivan does not
-track down murderers, he monitors "extremist political groups."  The
-Bureau uses a broad definition of extremism: if someone is even
-slightly famous and has said something negative about the government
-in the last 20 years, Sullivan has a file on them, and all their
-friends too.  Sullivan's job is also made considerably easier if he
-can listen in on these people's telephone conversations.  Unlike
-Reyes, Sullivan records *all* their telephone conversations, all the
-time, because Sullivan is looking for dirt.  Sullivan wants to be able
-to publicly humiliate each and every one of those people, at a
-moment's notice, should it become necessary.  Who decides if it's
-necessary?  Sullivan.
+The F.B.I. also employs Special Agent [Spender][].  Spender does not
+track down murderers, he monitors
+"[extremist political groups][COINTELPRO]." He uses a broad definition
+of extremism: if someone is even slightly famous and has said
+something negative about the government in the last 20 years, Spender
+has a file on them, and all their friends too.  Spender's job is also
+made considerably easier if he can listen in on these people's
+telephone conversations.  Unlike Reyes, Spender records *all* their
+telephone conversations, all the time, because Spender is looking for
+dirt.  Spender wants to be able to publicly humiliate each and every
+one of those people, at a moment's notice, should it become necessary.
+Who decides if it's necessary?  Spender.
 
-The difference between Reyes and Sullivan is the evil bit.
+The difference between Reyes and Spender is the evil bit.
 
 [RFC 3514]: https://tools.ietf.org/html/rfc3514
 [MUST]: https://tools.ietf.org/html/rfc2119
@@ -120,7 +120,8 @@ The difference between Reyes and Sullivan is the evil bit.
 [certificate authority]: https://en.wikipedia.org/wiki/Certificate_authority
 [Special Agent Reyes]: http://shadowunit.org/
 [CALEA]: https://en.wikipedia.org/wiki/Communications_Assistance_for_Law_Enforcement_Act
-[Special Agent Sullivan]: https://en.wikipedia.org/wiki/COINTELPRO
+[Spender]: https://en.wikipedia.org/wiki/The_Smoking_Man
+[COINTELPRO]: https://en.wikipedia.org/wiki/COINTELPRO
 [Matthew Skala]: http://ansuz.sooke.bc.ca/
 [[1]]: http://ansuz.sooke.bc.ca/entry/23
 [[2]]: http://ansuz.sooke.bc.ca/entry/24
