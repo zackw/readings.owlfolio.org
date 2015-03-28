@@ -143,6 +143,7 @@ thead > tr:last-child > th, thead > tr:last-child > td {
 
 .widget > h3 {
   font-size: 1.5em;
+  margin: 1em 0 0.5em;
 }
 
 .widget > ul {
@@ -155,6 +156,10 @@ thead > tr:last-child > th, thead > tr:last-child > td {
   column-gap: 1em;
   -moz-column-gap: 1em;
   -webkit-column-gap: 1em;
+}
+
+.more-items-link {
+  margin-top: 0.5em;
 }
 
 .pager {

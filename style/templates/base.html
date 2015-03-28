@@ -1,4 +1,4 @@
-{% from "macros.html" import category_list, tag_list, outbound_links, topbar %}
+{% from "macros.html" import author_list, category_list, tag_list, outbound_links, topbar %}
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
   <head>
@@ -55,8 +55,9 @@
       <h3><a href="//www.owlfolio.org/">« Owl’s Portfolio</a></h3>
       </nav>
       {% block siteindex %}
-      {{ tag_list(tag_cloud, TAGS_UPPERCASE) }}
       {{ category_list(categories) }}
+      {{ tag_list(tags, TAG_CAPITALIZATION) }}
+      {{ author_list(authors) }}
       {% endblock %}
     </div><!-- #sidebars -->
 

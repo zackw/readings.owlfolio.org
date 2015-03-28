@@ -18,6 +18,7 @@ RELATIVE_URLS          = True
 SUMMARY_MAX_LENGTH     = None
 USE_FOLDER_AS_CATEGORY = False
 DEFAULT_CATEGORY       = 'ERROR.CATEGORY.NOT.SET'
+REVERSE_CATEGORY_ORDER = True
 
 PATH                = 'content'
 PAGE_PATHS          = ['pages']
@@ -36,12 +37,21 @@ CATEGORY_URL        = '{slug}/'
 CATEGORY_SAVE_AS    = '{slug}/index.html'
 TAG_URL             = 't/{slug}/'
 TAG_SAVE_AS         = 't/{slug}/index.html'
+AUTHOR_URL          = 'a/{slug}/'
+AUTHOR_SAVE_AS      = 'a/{slug}/index.html'
 
-AUTHOR_SAVE_AS      = ''
 ARCHIVES_SAVE_AS    = ''
-AUTHORS_SAVE_AS     = ''
+AUTHORS_SAVE_AS     = 'a/index.html'
 CATEGORIES_SAVE_AS  = ''
 TAGS_SAVE_AS        = 't/index.html'
+
+TAG_CAPITALIZATION  = {
+    'pki'   : 'PKI',
+    'https' : 'HTTPS',
+    'bgp'   : 'BGP',
+    'ipv4'  : 'IPv4',
+    'ipv6'  : 'IPv6'
+}
 
 PAGINATION_PATTERNS = [
     (1, '{base_name}/', '{base_name}/index.html'),
@@ -70,11 +80,6 @@ MENUITEMS = [
     ('Photography',     'https://www.flickr.com/zackw/photos/', 'right')
 ]
 
-# Tag cloud
-TAG_CLOUD_STEPS     = 4
-TAG_CLOUD_MAX_ITEMS = 20
-TAGS_UPPERCASE      = ['pki', 'https', 'bgp']
-
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -91,3 +96,22 @@ EXTRA_PATH_METADATA = {
 # If assets is allowed to run in debug mode, it puts the CSS files in
 # the wrong place, breaking links to subresources.
 ASSET_DEBUG = False
+
+# These properly belong to the bibliog extension, but have to be done
+# here.  (Also, it's infuriating that jinja's builtin sort filter
+# doesn't support key=.  Actually, it's infuriating that jinja
+# expressions are *in any way* different from regular python
+# expressions.  Thou shalt not reinvent the square wheel.)
+
+def jf_sort_authors_by_lf_name(author_list):
+    return sorted(author_list, key = lambda xy: xy[0].lf_name)
+
+def jf_sort_by_article_count(articles_list):
+    return sorted(articles_list, key = lambda xy: (-len(xy[1]), xy[0]))
+
+JINJA_FILTERS = {
+    'sort_authors_by_lf_name':  jf_sort_authors_by_lf_name,
+    'sort_by_article_count':    jf_sort_by_article_count
+}
+
+JINJA_EXTENSIONS = ['jinja2.ext.loopcontrols']

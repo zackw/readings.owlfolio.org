@@ -51,6 +51,19 @@
 </header>
 {% endmacro %}
 
+{% macro author_list(authors) %}
+<nav class="index widget">
+  <h3>Paper authors</h3>
+  <ul>
+    {% for author, articles in authors|sort_by_article_count %}
+    {% if loop.index > 10 %}{% break %}{% endif %}
+    <li><a href="/{{ author.url }}">{{ author }}</a></li>
+    {% endfor %}
+    <li class="more-items-link"><a href="/a/">All authors…</a></li>
+  </ul>
+</nav>
+{% endmacro %}
+
 {% macro category_list(categories) %}
 <nav class="index widget">
   <h3>Publication years</h3>
@@ -62,22 +75,23 @@
 </nav>
 {% endmacro %}
 
-{% macro tag_list(tag_cloud, uppercase) %}
+{% macro tag_list(tags, capitalization) %}
 <nav class="index widget">
-  <h3>Article topics</h3>
+  <h3>Paper topics</h3>
   <ul>
-    {% for tag in tag_cloud %}
-    <li class="tag-{{ tag.1 }}"><a href="/{{ tag.0.url }}"
-     >{{ tag_name(tag.0, uppercase) }}</a></li>
+    {% for tag, articles in tags|sort_by_article_count %}
+    {% if loop.index > 10 %}{% break %}{% endif %}
+    <li><a href="/{{ tag.url }}"
+     >{{ tag_name(tag, capitalization) }}</a></li>
     {% endfor %}
-    <li class="tag-1"><a href="/t/">More...</a></li>
+    <li class="more-items-link"><a href="/t/">All topics…</a></li>
   </ul>
 </nav>
 {% endmacro %}
 
-{% macro tag_name(tag, uppercase) -%}
-{% if tag.name in uppercase -%}
-{{ tag | upper | escape -}}
+{% macro tag_name(tag, capitalization) -%}
+{% if tag.name in capitalization -%}
+{{ capitalization[tag.name] | escape -}}
 {% else -%}
 {{ tag | capitalize | escape -}}
 {% endif -%}

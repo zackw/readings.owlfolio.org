@@ -9,7 +9,7 @@ Archives, page {{ articles_page.number }} | {% endif %}{{ SITENAME -}}
 {% endblock %}
 {% for article in articles_page.object_list %}
 <article class="hentry">
-  {{ article_header(article, 2, TAGS_UPPERCASE) }}
+  {{ article_header(article, 2, TAG_CAPITALIZATION) }}
   <div class="entry-content">
     {{ article.summary }}
   </div>
