@@ -136,10 +136,28 @@ thead > tr:last-child > th, thead > tr:last-child > td {
 .entry-meta {
   display: block;
   width: auto;
-  float: right;
-  font-size: 12px;
-  font-style: italic;
+  overflow: auto;
+  font-size: 14px;
 }
+.paper-meta {
+  max-width: 45%;
+}
+.review-meta {
+  float: right;
+  text-align: right;
+  font-style: italic;
+  max-width: 45%;
+}
+.authors {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+.tags {
+}
+.published, .modified {
+  display: block;
+}
+
 
 .widget > h3 {
   font-size: 1.5em;

@@ -27,26 +27,69 @@
 </nav>
 {% endmacro %}
 
-{% macro article_header(article, level, uppercase) %}
-<header class="post-header">
+{% macro entry_title(article, level) %}
   <h{{ level }} class="entry-title"><a
        href="/{{ article.url }}" rel="bookmark"
        title="Permalink to {{ article.title | striptags }}"
   >{{ article.title }}</a></h{{ level }}>
+{% endmacro %}
+
+{% macro article_header(article, capitalization) %}
+<header class="post-header">
+  {{ entry_title(article, 1) }}
   <div class="entry-meta">
-    <span class="tags">{%
-      for tag in article.tags|sort
-        %}<a href="/{{ tag.url }}">{{ tag_name(tag, uppercase) }}</a>{%
-      if not loop.last %}{{ ", " }}{% endif %}{%
-      endfor
-    %}</span>{{ "&#8192;•&#8192;" -}}
-    <time class="published" datetime="{{ article.date.isoformat() }}"
-          >{{ article.locale_date }}</time>
-    {%- if article.modified -%}
-    &#8193;Edited
-    <time class="modified" datetime="{{ article.modified.isoformat() }}"
-          >{{ article.locale_date }}</time>
-    {%- endif -%}
+    <div class="review-meta">
+      <time class="published" datetime="{{ article.date.isoformat() }}"
+            >Reviewed {{ article.locale_date }}</time>
+      {%- if article.modified -%}
+      <time class="modified" datetime="{{ article.modified.isoformat() }}"
+            >Review edited {{ article.locale_modified }}</time>
+      {%- endif -%}
+      <div class="tags">{%
+        for tag in article.tags|sort
+        %}<a href="/{{ tag.url }}">{{ tag_name(tag, capitalization) }}</a>{%
+        if not loop.last %}{{ ", " }}{% endif %}{%
+        endfor
+        %}</div>
+    </div>
+    <div class="paper-meta">
+      <div class="authors">{%
+        for author in article.authors
+        %}<a href="/{{ author.url }}">{{ author }}</a>{%
+        if not loop.last %}{{ ", " }}{% endif %}{%
+        endfor
+        %}</div>
+    </div>
+  </div>
+</header>
+{% endmacro %}
+
+{% macro article_short_header(article, capitalization) %}
+<header class="post-header">
+  {{ entry_title(article, 2) }}
+  <div class="entry-meta">
+    <div class="review-meta">
+      <time class="published" datetime="{{ article.date.isoformat() }}"
+            >Reviewed {{ article.locale_date }}</time>
+      {%- if article.modified -%}
+      <time class="modified" datetime="{{ article.modified.isoformat() }}"
+            >Review edited {{ article.locale_modified }}</time>
+      {%- endif -%}
+      <div class="tags">{%
+        for tag in article.tags|sort
+        %}<a href="/{{ tag.url }}">{{ tag_name(tag, capitalization) }}</a>{%
+        if not loop.last %}{{ ", " }}{% endif %}{%
+        endfor
+        %}</div>
+    </div>
+    <div class="paper-meta">
+      <div class="authors">{%
+        for author in article.authors
+        %}<a href="/{{ author.url }}">{{ author }}</a>{%
+        if not loop.last %}{{ ", " }}{% endif %}{%
+        endfor
+        %}</div>
+    </div>
   </div>
 </header>
 {% endmacro %}

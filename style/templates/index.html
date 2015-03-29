@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import pager, article_header %}
+{% from "macros.html" import pager, article_short_header %}
 {% block title %}
 {% if articles_page and articles_page.has_previous() %}
 Archives, page {{ articles_page.number }} | {% endif %}{{ SITENAME -}}
@@ -9,7 +9,7 @@ Archives, page {{ articles_page.number }} | {% endif %}{{ SITENAME -}}
 {% endblock %}
 {% for article in articles_page.object_list %}
 <article class="hentry">
-  {{ article_header(article, 2, TAG_CAPITALIZATION) }}
+  {{ article_short_header(article, TAG_CAPITALIZATION) }}
   <div class="entry-content">
     {{ article.summary }}
   </div>
