@@ -5,7 +5,7 @@ authors:
  - Durumeric, Zakir
  - Kasten, James
  - Bailey, Michael
- - Halderman, J. Alex
+ - Halderman, J.&nbsp;Alex
 year: 2013
 bibtex_type: inproceedings
 booktitle: Internet Measurement Conference

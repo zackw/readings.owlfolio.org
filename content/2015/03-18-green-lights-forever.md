@@ -6,7 +6,7 @@ authors:
  - Beyer, William
  - Hillaker, Allen
  - Pevarnek, Jonathan
- - Halderman, J. Alex
+ - Halderman, J.&nbsp;Alex
 year: 2014
 bibtex_type: inproceedings
 booktitle: Workshop on Offensive Technologies
