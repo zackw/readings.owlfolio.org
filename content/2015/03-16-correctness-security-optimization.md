@@ -6,10 +6,7 @@ authors:
  - Payer, Mathias
  - Song, Dawn
 year: 2015
-bibtex_type: inproceedings
-booktitle: Workshop on Language-Theoretic Security
-booktitle_url: http://spw15.langsec.org/index.html
-organization: IEEE
+venue: LangSec
 pdf_url: http://nebelwelt.net/publications/15LangSec/CorrectnessSecurityGap-LangSec15.pdf
 ...
 

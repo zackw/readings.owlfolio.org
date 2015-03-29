@@ -7,12 +7,10 @@ authors:
  - Bailey, Michael
  - Halderman, J.&nbsp;Alex
 year: 2013
-bibtex_type: inproceedings
-booktitle: Internet Measurement Conference
-booktitle_url: http://conferences.sigcomm.org/imc/2013/
+venue: IMC
 pages: 291--304
-organization: ACM SIGCOMM
-doi: 10.1145/2504730.2504755
+eprints:
+  doi: 10.1145/2504730.2504755
 pdf_url: https://jhalderm.com/pub/papers/https-imc13.pdf
 ...
 

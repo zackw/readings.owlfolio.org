@@ -7,8 +7,9 @@ authors:
  - Mehta, Kunal
  - Hota, Chittaranjan
 year: 2014
-bibtex_type: unpublished
-doi: 10.13140/2.1.2533.2804
+venue: preprint
+eprints:
+  doi: 10.13140/2.1.2533.2804
 pdf_url: http://www.bits-pilani.ac.in/uploads/Hyderabad/hota/Pratik-hota.pdf
 ...
 

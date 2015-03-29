@@ -5,12 +5,10 @@ authors:
  - Yu, Jiangmin
  - Chan-Tin, Eric
 year: 2014
-bibtex_type: inproceedings
-booktitle: Workshop on Privacy in the Electronic Society
-booktitle_url: https://www.cylab.cmu.edu/news_events/events/wpes2014/
-organization: ACM SIGSAC
+venue: WPES
 pages: 135--138
-doi: 10.1145/2665943.2665968
+eprints:
+  doi: 10.1145/2665943.2665968
 pdf_url: http://www.cs.okstate.edu/~chantin/WPES2014.pdf
 ...
 

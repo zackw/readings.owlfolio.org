@@ -9,10 +9,9 @@ authors:
  - Borisov, Nikita
  - Caesar, Matthew
 year: 2015
-bibtex_type: unpublished
-eprinttype: arXiv
-eprintclass: cs.CR
-eprint: 1410.1823
+venue: preprint
+eprints:
+  arxiv: "1410.1823 [cs.CR]"
 ...
 
 In a similar vein as

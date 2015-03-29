@@ -3,9 +3,9 @@ title: The Security Flag in the IPv4 Header
 tags: [philosophy of security, coloured bits]
 author: Bellovin, Steven M.
 year: 2003
-bibtex_type: misc
-eprinttype: rfc
-eprint: 3514
+venue: preprint
+eprints:
+  rfc: 3514
 ...
 
 Today I propose to explain a classic joke---or perhaps I should call

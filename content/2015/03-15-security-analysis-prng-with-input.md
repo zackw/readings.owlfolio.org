@@ -8,14 +8,11 @@ authors:
  - Vergnaud, Damien
  - Wichs, Daniel
 year: 2013
-bibtex_type: inproceedings
-booktitle: Computer and Communications Security
-booktitle_url: http://www.sigsac.org/ccs/CCS2013/
+venue: CCS
 pages: 647--658
-organization: ACM SIGSAC
-doi: 10.1145/2508859.2516653
-eprinttype: IACR
-eprint: 2013/338
+eprints:
+  doi: 10.1145/2508859.2516653
+  iacr: 2013/338
 ...
 
 Coming up in this year’s [CCS](http://www.sigsac.org/ccs/CCS2013/) is

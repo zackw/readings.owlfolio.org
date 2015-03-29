@@ -8,10 +8,7 @@ authors:
  - Pevarnek, Jonathan
  - Halderman, J.&nbsp;Alex
 year: 2014
-bibtex_type: inproceedings
-booktitle: Workshop on Offensive Technologies
-booktitle_url: https://www.usenix.org/conference/woot14
-organization: USENIX
+venue: WOOT
 pdf_url: https://www.usenix.org/system/files/conference/woot14/woot14-ghena.pdf
 ...
 
