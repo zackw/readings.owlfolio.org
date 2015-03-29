@@ -20,6 +20,7 @@ SUMMARY_MAX_LENGTH     = None
 USE_FOLDER_AS_CATEGORY = False
 DEFAULT_CATEGORY       = 'ERROR.CATEGORY.NOT.SET'
 REVERSE_CATEGORY_ORDER = True
+WITH_FUTURE_DATES      = False
 
 PATH                = 'content'
 PAGE_PATHS          = ['pages']

@@ -20,7 +20,9 @@
   <div class="entry-content">
     {{ article.content }}
   </div>
+  {% if article.next_article is defined %}
   {{ pager(article.next_article, article.next_article.title,
            article.prev_article, article.prev_article.title) }}
+  {% endif %}
 </article>
 {% endblock %}
