@@ -11,7 +11,7 @@ venue: HotNets
 pages: 14:1--14:7
 eprints:
   doi: 10.1145/2670518.2673869
-pdf_url: http://conferences.sigcomm.org/hotnets/2014/papers/hotnets-XIII-final80.pdf
+url: http://conferences.sigcomm.org/hotnets/2014/papers/hotnets-XIII-final80.pdf
 ...
 
 One of the oldest research threads regarding [Tor][] is trying to

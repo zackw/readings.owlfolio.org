@@ -10,6 +10,7 @@ SITENAME               = 'Readings in Information Security'
 SITEURL                = ''
 TIMEZONE               = 'America/New_York'
 DEFAULT_DATE           = None
+PUBLICATION_TIME       = { 'hour': 8, 'minute': 0, 'second': 0 }
 PATH_METADATA          = '^(?P<date>\d{4}/\d{2}-\d{2})-(?P<slug>[^.]+)'
 DEFAULT_DATE_FORMAT    = '%-d %B %Y'
 DEFAULT_LANG           = 'en'

@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% from "macros.html" import tag_name %}
 
 {% block title %}Paper topics | {{ SITENAME }}{% endblock %}
 
@@ -11,7 +10,7 @@
   <div class="entry-content">
     <ul>
     {%- for tag, articles in tags|sort %}
-        <li><a href="/{{ tag.url }}">{{ tag_name(tag, TAG_CAPITALIZATION) }}</a>
+        <li><a href="/{{ tag.url }}">{{ tag }}</a>
             ({{ articles|count }})</li>
     {% endfor %}
     </ul>

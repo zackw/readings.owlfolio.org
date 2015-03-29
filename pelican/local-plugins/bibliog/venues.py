@@ -6,8 +6,7 @@
 # It also contains classes for each _type_ of venue which handle some
 # of the formatting details for HTML and BibTeX.
 
-from lxml import etree
-from lxml.html import builder as E
+from lxml.html import builder as H
 
 # From http://infohost.nmt.edu/tcc/help/pubs/pylxml/web/builder-addText.html
 # Why did anyone think the tail representation was a good idea, anyway?
@@ -25,6 +24,9 @@ class Venue:
     def __init__(self, *, name):
         self.name = name
 
+    def __str__(self):
+        return 'Venue(' + repr(self.name) + ')'
+
     def get_link(self, year):
         return None
 
@@ -39,12 +41,12 @@ class Conference(Venue):
         year = str(year)
         url = self.urls.get(year, None)
         if url is None: return None
-        return E.A(E.EM(self.name), " " + year,
+        return H.A(H.EM(self.name), " " + year,
                    href=url)
 
 class Preprint(Venue):
     def __init__(self):
-        Venue.__init__(self, name='[preprint]')
+        Venue.__init__(self, name='Preprint')
         self.bibtex_type = 'unpublished'
 
 VENUES = {
@@ -104,16 +106,16 @@ VENUES = {
 class EPrint:
     def __init__(self, name, base_url, colon=True):
         self.name     = name
-        self.base_url = url
+        self.base_url = base_url
         self.colon    = colon
 
     def get_url(self, data):
         return self.base_url + data.strip()
 
     def _build_link(self, data, url):
-        return E.SPAN(E.CLASS("eprint"),
-                      self.name + (": " if self.colon else " "),
-                      E.A(data, href=url))
+        return H.DIV(H.CLASS("eprint " + self.name.lower()),
+                     self.name + (": " if self.colon else " "),
+                     H.A(data, href=url))
 
     def get_link(self, data):
         data = data.strip()

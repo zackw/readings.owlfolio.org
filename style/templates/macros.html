@@ -27,73 +27,6 @@
 </nav>
 {% endmacro %}
 
-{% macro entry_title(article, level) %}
-  <h{{ level }} class="entry-title"><a
-       href="/{{ article.url }}" rel="bookmark"
-       title="Permalink to {{ article.title | striptags }}"
-  >{{ article.title }}</a></h{{ level }}>
-{% endmacro %}
-
-{% macro article_header(article, capitalization) %}
-<header class="post-header">
-  {{ entry_title(article, 1) }}
-  <div class="entry-meta">
-    <div class="review-meta">
-      <time class="published" datetime="{{ article.date.isoformat() }}"
-            >Reviewed {{ article.locale_date }}</time>
-      {%- if article.modified -%}
-      <time class="modified" datetime="{{ article.modified.isoformat() }}"
-            >Review edited {{ article.locale_modified }}</time>
-      {%- endif -%}
-      <div class="tags">{%
-        for tag in article.tags|sort
-        %}<a href="/{{ tag.url }}">{{ tag_name(tag, capitalization) }}</a>{%
-        if not loop.last %}{{ ", " }}{% endif %}{%
-        endfor
-        %}</div>
-    </div>
-    <div class="paper-meta">
-      <div class="authors">{%
-        for author in article.authors
-        %}<a href="/{{ author.url }}">{{ author }}</a>{%
-        if not loop.last %}{{ ", " }}{% endif %}{%
-        endfor
-        %}</div>
-    </div>
-  </div>
-</header>
-{% endmacro %}
-
-{% macro article_short_header(article, capitalization) %}
-<header class="post-header">
-  {{ entry_title(article, 2) }}
-  <div class="entry-meta">
-    <div class="review-meta">
-      <time class="published" datetime="{{ article.date.isoformat() }}"
-            >Reviewed {{ article.locale_date }}</time>
-      {%- if article.modified -%}
-      <time class="modified" datetime="{{ article.modified.isoformat() }}"
-            >Review edited {{ article.locale_modified }}</time>
-      {%- endif -%}
-      <div class="tags">{%
-        for tag in article.tags|sort
-        %}<a href="/{{ tag.url }}">{{ tag_name(tag, capitalization) }}</a>{%
-        if not loop.last %}{{ ", " }}{% endif %}{%
-        endfor
-        %}</div>
-    </div>
-    <div class="paper-meta">
-      <div class="authors">{%
-        for author in article.authors
-        %}<a href="/{{ author.url }}">{{ author }}</a>{%
-        if not loop.last %}{{ ", " }}{% endif %}{%
-        endfor
-        %}</div>
-    </div>
-  </div>
-</header>
-{% endmacro %}
-
 {% macro author_list(authors) %}
 <nav class="index widget">
   <h3>Paper authors</h3>
@@ -118,26 +51,18 @@
 </nav>
 {% endmacro %}
 
-{% macro tag_list(tags, capitalization) %}
+{% macro tag_list(tags) %}
 <nav class="index widget">
   <h3>Paper topics</h3>
   <ul>
     {% for tag, articles in tags|sort_by_article_count %}
     {% if loop.index > 10 %}{% break %}{% endif %}
     <li><a href="/{{ tag.url }}"
-     >{{ tag_name(tag, capitalization) }}</a></li>
+     >{{ tag }}</a></li>
     {% endfor %}
     <li class="more-items-link"><a href="/t/">All topics…</a></li>
   </ul>
 </nav>
-{% endmacro %}
-
-{% macro tag_name(tag, capitalization) -%}
-{% if tag.name in capitalization -%}
-{{ capitalization[tag.name] | escape -}}
-{% else -%}
-{{ tag | capitalize | escape -}}
-{% endif -%}
 {% endmacro %}
 
 {% macro outbound_links(section_title, links, attrs='') %}

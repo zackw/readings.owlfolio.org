@@ -7,7 +7,7 @@ authors:
  - Song, Dawn
 year: 2015
 venue: LangSec
-pdf_url: http://nebelwelt.net/publications/15LangSec/CorrectnessSecurityGap-LangSec15.pdf
+url: http://nebelwelt.net/publications/15LangSec/CorrectnessSecurityGap-LangSec15.pdf
 ...
 
 At this year's [LangSec Workshop][], a paper on formal analysis of

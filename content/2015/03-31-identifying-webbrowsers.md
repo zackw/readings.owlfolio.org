@@ -9,7 +9,7 @@ venue: WPES
 pages: 135--138
 eprints:
   doi: 10.1145/2665943.2665968
-pdf_url: http://www.cs.okstate.edu/~chantin/WPES2014.pdf
+url: http://www.cs.okstate.edu/~chantin/WPES2014.pdf
 ...
 
 If you are a website, it is fairly easy to identify the web browser in

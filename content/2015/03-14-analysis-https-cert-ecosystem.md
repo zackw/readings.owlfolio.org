@@ -5,13 +5,13 @@ authors:
  - Durumeric, Zakir
  - Kasten, James
  - Bailey, Michael
- - Halderman, J.&nbsp;Alex
+ - Halderman, J. Alex
 year: 2013
 venue: IMC
 pages: 291--304
 eprints:
   doi: 10.1145/2504730.2504755
-pdf_url: https://jhalderm.com/pub/papers/https-imc13.pdf
+url: https://jhalderm.com/pub/papers/https-imc13.pdf
 ...
 
 The

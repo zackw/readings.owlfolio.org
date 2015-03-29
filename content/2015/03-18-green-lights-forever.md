@@ -6,10 +6,10 @@ authors:
  - Beyer, William
  - Hillaker, Allen
  - Pevarnek, Jonathan
- - Halderman, J.&nbsp;Alex
+ - Halderman, J. Alex
 year: 2014
 venue: WOOT
-pdf_url: https://www.usenix.org/system/files/conference/woot14/woot14-ghena.pdf
+url: https://www.usenix.org/system/files/conference/woot14/woot14-ghena.pdf
 ...
 
 Consider the humble traffic light.  The basic design dates to the

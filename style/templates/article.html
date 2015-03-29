@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import pager, article_header %}
+{% from "macros.html" import pager %}
 {% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
 {% block head %}
   {{ super() }}
@@ -16,7 +16,7 @@
 
 {% block content %}
 <article id="content" class="body">
-  {{ article_header(article, TAG_CAPITALIZATION) }}
+  {{ article_header_full(article) }}
   <div class="entry-content">
     {{ article.content }}
   </div>

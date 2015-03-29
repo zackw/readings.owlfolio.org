@@ -10,7 +10,7 @@ year: 2014
 venue: preprint
 eprints:
   doi: 10.13140/2.1.2533.2804
-pdf_url: http://www.bits-pilani.ac.in/uploads/Hyderabad/hota/Pratik-hota.pdf
+url: http://www.bits-pilani.ac.in/uploads/Hyderabad/hota/Pratik-hota.pdf
 ...
 
 Commercial intrusion detection systems are designed for corporate
