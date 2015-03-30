@@ -10,8 +10,7 @@
   <div class="entry-content">
     <ul>
     {%- for author, articles in authors|sort_authors_by_lf_name %}
-        <li><a href="/{{ author.url }}">{{ author.lf_name }}</a>
-            ({{ articles|count }})</li>
+        <li><a href="/{{ author.url }}">{{ author.lf_name }}</a></li>
     {% endfor %}
     </ul>
   </div>
