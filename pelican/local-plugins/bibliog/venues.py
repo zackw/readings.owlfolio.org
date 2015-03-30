@@ -118,7 +118,7 @@ class EPrint:
                      H.A(data, href=url))
 
     def get_link(self, data):
-        data = data.strip()
+        data = str(data).strip()
         url = self.get_url(data)
         return self._build_link(data, url)
 
