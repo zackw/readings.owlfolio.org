@@ -1,0 +1,32 @@
+#! /bin/bash
+
+# paper over the various names that the desired python interpreter might have
+# if we're not already in a venv, first enable pelican-venv if it can be found
+
+CMD="$0".py
+
+case "$0" in
+    (*/*)  ACTIVATE="${0%/*}/../pelican-venv/bin/activate" ;;
+    (*)    ACTIVATE="../pelican-venv/bin/activate" ;;
+esac
+
+if type -t deactivate > /dev/null 2>&1
+then
+    :
+elif [ -f "$ACTIVATE" ]
+then
+    . "$ACTIVATE"
+fi
+
+for PYTHON in python python3 python3.4
+do
+    # this mini-program will fail if the interpreter is too old to run the
+    # real program correctly, or if libraries are missing
+    if "$PYTHON" -c 'import unidecode; FileNotFoundError' > /dev/null 2>&1
+    then
+        exec $PYTHON "$CMD" "$@"
+    fi
+done
+
+echo "Unable to find a suitable python interpreter" >&2
+exit 1
