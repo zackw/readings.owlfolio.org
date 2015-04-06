@@ -159,7 +159,7 @@ def paper_meta_abbrv(article):
     if hasattr(article, 'venue'):
         venue = VENUES.get(article.venue, None)
         if venue:
-            venue_link = venue.get_link(article.year)
+            venue_link = venue.get_link(article.metadata)
             if venue_link is not None:
                 elements.append(H.DIV(H.CLASS("venue"), venue_link))
         else:

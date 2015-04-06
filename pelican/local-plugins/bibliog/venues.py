@@ -27,22 +27,31 @@ class Venue:
     def __str__(self):
         return 'Venue(' + repr(self.name) + ')'
 
-    def get_link(self, year):
+    def get_link(self, citation):
         return None
 
 class Conference(Venue):
-    def __init__(self, *, name, organization, urls):
+    def __init__(self, *, name, organization=None, urls=None):
         Venue.__init__(self, name=name)
-        self.urls = urls
+        self.urls = urls or {}
         self.organization = organization
         self.bibtex_type = 'inproceedings'
 
-    def get_link(self, year):
-        year = str(year)
+    def get_link(self, citation):
+        year = str(citation.get('year', '')).strip()
         url = self.urls.get(year, None)
-        if url is None: return None
-        return H.A(H.EM(self.name), " " + year,
-                   href=url)
+
+        name = H.EM(self.name)
+        if url is None:
+            if year == '':
+                return name
+            else:
+                return H.SPAN(name, " " + year)
+        else:
+            if year == '':
+                return H.A(name, href=url)
+            else:
+                return H.A(H.EM(self.name), " " + year, href=url)
 
 class Preprint(Venue):
     def __init__(self):
@@ -91,6 +100,13 @@ VENUES = {
         organization = 'ACM SIGSAC',
         urls = {
             '2014': 'https://www.cylab.cmu.edu/news_events/events/wpes2014/',
+        }
+    ),
+
+    'ATIS': Conference(
+        name = 'Applications and Techniques in Information Security',
+        urls = {
+            '2014': 'http://atis2014.tulip.org.au/'
         }
     ),
 
