@@ -1,6 +1,6 @@
 ---
 title: "Anonymity on QuickSand: Using BGP to Compromise Tor"
-tags: [bgp, tor, traffic analysis, autonomous systems, routing]
+tags: [bgp, tor, anonymity, traffic analysis, autonomous systems, routing]
 authors:
  - Vanbever, Laurent
  - Li, Oscar

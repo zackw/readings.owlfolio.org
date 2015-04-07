@@ -1,6 +1,6 @@
 ---
 title: Identifying Webbrowsers in Encrypted Communications
-tags: [fingerprinting, web, information leakage, deanonymization]
+tags: [fingerprinting, web, information leakage, anonymity]
 authors:
  - Yu, Jiangmin
  - Chan-Tin, Eric
