@@ -109,7 +109,7 @@ def main(argv, stdout):
             f.write(textwrap.dedent("""\
             ---
             title:
-            tags:
+            tags: []
             authors:
              -
             year:
@@ -118,5 +118,11 @@ def main(argv, stdout):
             """))
 
         stdout.write("Created content/{}\n".format(path))
+
+        editor = os.getenv("EDITOR")
+        visual = os.getenv("VISUAL")
+        if visual: editor = visual
+        if editor:
+            os.execvp(editor, [editor, os.path.join(CONTENT_BASE, path)])
 
 main(sys.argv, sys.stdout)
