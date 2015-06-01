@@ -49,8 +49,9 @@ def posting_date_sequence(start_date):
         yield d         # Monday
         yield d + 2*day # Wednesday
         yield d + 4*day # Friday
-        yield d +   day # Tuesday
-        yield d + 3*day # Thursday
+        # MWF posting schedule till further notice
+        #yield d +   day # Tuesday
+        #yield d + 3*day # Thursday
         d += week
 
 def dates_already_used(year):
