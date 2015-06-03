@@ -59,7 +59,13 @@ class Preprint(Venue):
         self.bibtex_type = 'unpublished'
 
 VENUES = {
-    # Conferences
+    # Conferences, alpha by tag
+    'ATIS': Conference(
+        name = 'Applications and Techniques in Information Security',
+        urls = {
+            '2014': 'http://atis2014.tulip.org.au/'
+        }
+    ),
     'CCS': Conference(
         name = 'Computer and Communications Security',
         organization = 'ACM SIGSAC',
@@ -102,11 +108,10 @@ VENUES = {
             '2014': 'https://www.cylab.cmu.edu/news_events/events/wpes2014/',
         }
     ),
-
-    'ATIS': Conference(
-        name = 'Applications and Techniques in Information Security',
+    'WWW': Conference(
+        name = 'International World Wide Web Conference',
         urls = {
-            '2014': 'http://atis2014.tulip.org.au/'
+            '2015': 'http://www2015.wwwconference.org/'
         }
     ),
 
