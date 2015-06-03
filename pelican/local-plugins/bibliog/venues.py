@@ -53,6 +53,41 @@ class Conference(Venue):
             else:
                 return H.A(H.EM(self.name), " " + year, href=url)
 
+class Journal(Venue):
+    def __init__(self, *, name, urls=None):
+        Venue.__init__(self, name=name)
+        self.urls = urls or {}
+        self.bibtex_type = 'article'
+
+    def get_link(self, citation):
+        volume = str(citation.get('volume', '')).strip()
+        issue  = str(citation.get('issue', '')).strip()
+        year   = str(citation.get('year', '')).strip()
+
+        url = self.urls.get(volume, None)
+        name = H.EM(self.name)
+
+        if url is None:
+            link = H.SPAN(name)
+        else:
+            link = H.A(name, href=url)
+
+        if volume:
+            addText(link, " " + volume)
+
+        # Issue and year do not go inside the hyperlink, if any
+        if (issue or year) and url is not None:
+            link = H.SPAN(link)
+
+        if issue:
+            addText(link, "(" + issue + ")")
+
+        if year:
+            addText(link, "; " + year)
+
+        return link
+
+
 class Preprint(Venue):
     def __init__(self):
         Venue.__init__(self, name='Preprint')
@@ -112,6 +147,14 @@ VENUES = {
         name = 'International World Wide Web Conference',
         urls = {
             '2015': 'http://www2015.wwwconference.org/'
+        }
+    ),
+
+    # Journals, alpha by tag
+    'J.ComNet': Journal(
+        name = 'Computer Networks',
+        urls = {
+            '77': 'http://www.sciencedirect.com/science/journal/13891286/77/'
         }
     ),
 
