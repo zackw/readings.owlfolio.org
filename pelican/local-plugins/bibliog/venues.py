@@ -54,9 +54,13 @@ class Conference(Venue):
                 return H.A(H.EM(self.name), " " + year, href=url)
 
 class Journal(Venue):
-    def __init__(self, *, name, urls=None):
+    def __init__(self, *, name,
+                 url=None, url_vol=None, url_iss=None, url_vol_iss=None):
         Venue.__init__(self, name=name)
-        self.urls = urls or {}
+        self.url         = url
+        self.url_vol     = url_vol
+        self.url_iss     = url_iss
+        self.url_vol_iss = url_vol_iss
         self.bibtex_type = 'article'
 
     def get_link(self, citation):
@@ -64,25 +68,58 @@ class Journal(Venue):
         issue  = str(citation.get('issue', '')).strip()
         year   = str(citation.get('year', '')).strip()
 
-        url = self.urls.get(volume, None)
         name = H.EM(self.name)
 
-        if url is None:
-            link = H.SPAN(name)
+        if volume and issue and self.url_vol_iss:
+            url = self.url_vol_iss.format(volume=volume, issue=issue)
+            linkto = 'all'
+
+        elif issue and self.url_iss:
+            url = self.url_iss.format(issue=issue)
+            linkto = 'all'
+
+        elif volume and self.url_vol:
+            url = self.url_vol.format(volume=volume)
+            linkto = 'volume'
+
+        elif self.url:
+            url = self.url
+            linkto = 'name'
+
         else:
+            url = None
+            linkto = None
+
+        if url:
             link = H.A(name, href=url)
+            is_A = True
+        else:
+            link = H.SPAN(name)
+            is_A = False
 
         if volume:
+            if is_A and linkto != 'volume' and linkto != 'all':
+                link = H.SPAN(link)
+                is_A = False
+
             addText(link, " " + volume)
 
-        # Issue and year do not go inside the hyperlink, if any
-        if (issue or year) and url is not None:
-            link = H.SPAN(link)
-
         if issue:
-            addText(link, "(" + issue + ")")
+            if is_A and linkto != 'all':
+                link = H.SPAN(link)
+                is_A = False
 
+            if volume:
+                addText(link, "(" + issue + ")")
+            else:
+                addText(link, " iss.\u2009" + issue)
+
+        # The year never goes inside the hyperlink.
         if year:
+            if is_A:
+                link = H.SPAN(link)
+                is_A = False
+
             addText(link, "; " + year)
 
         return link
@@ -153,9 +190,15 @@ VENUES = {
     # Journals, alpha by tag
     'J.ComNet': Journal(
         name = 'Computer Networks',
-        urls = {
-            '77': 'http://www.sciencedirect.com/science/journal/13891286/77/'
-        }
+        url = 'http://www.sciencedirect.com/science/journal/13891286/',
+        url_vol =
+            'http://www.sciencedirect.com/science/journal/13891286/{volume}/',
+    ),
+
+    'PNAS': Journal(
+        name = 'Proc Nat Acad Sci',
+        url = 'http://www.pnas.org/',
+        url_vol_iss = 'http://www.pnas.org/content/{volume}/{issue}.toc'
     ),
 
     # Preprints
