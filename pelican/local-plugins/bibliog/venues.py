@@ -159,6 +159,13 @@ VENUES = {
             '2015': 'http://spw15.langsec.org/index.html',
         }
     ),
+    'MoST': Conference(
+        name = 'Mobile Security Technologies',
+        organization = 'IEEE',
+        urls = {
+            '2015': 'http://www.ieee-security.org/TC/SPW2015/MoST/'
+        }
+    ),
     'HotNets': Conference(
         name = 'Hot Topics in Networks',
         organization = 'ACM SIGCOMM',
