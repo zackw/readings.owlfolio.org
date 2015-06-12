@@ -135,7 +135,7 @@ VENUES = {
     'ATIS': Conference(
         name = 'Applications and Techniques in Information Security',
         urls = {
-            '2014': 'http://atis2014.tulip.org.au/'
+            '2014': 'http://atis2014.tulip.org.au/',
         }
     ),
     'CCS': Conference(
@@ -143,6 +143,13 @@ VENUES = {
         organization = 'ACM SIGSAC',
         urls = {
             '2013': 'http://www.sigsac.org/ccs/CCS2013/',
+        }
+    ),
+    'HotNets': Conference(
+        name = 'Hot Topics in Networks',
+        organization = 'ACM SIGCOMM',
+        urls = {
+            '2014': 'http://conferences.sigcomm.org/hotnets/2014/',
         }
     ),
     'IMC': Conference(
@@ -163,14 +170,14 @@ VENUES = {
         name = 'Mobile Security Technologies',
         organization = 'IEEE',
         urls = {
-            '2015': 'http://www.ieee-security.org/TC/SPW2015/MoST/'
+            '2015': 'http://www.ieee-security.org/TC/SPW2015/MoST/',
         }
     ),
-    'HotNets': Conference(
-        name = 'Hot Topics in Networks',
-        organization = 'ACM SIGCOMM',
+    'Oakland': Conference(
+        name = 'Symposium on Security and Privacy',
+        organization = 'IEEE',
         urls = {
-            '2014': 'http://conferences.sigcomm.org/hotnets/2014/',
+            '2015': 'http://www.ieee-security.org/TC/SP2015/',
         }
     ),
     'WOOT': Conference(
@@ -190,7 +197,7 @@ VENUES = {
     'WWW': Conference(
         name = 'International World Wide Web Conference',
         urls = {
-            '2015': 'http://www2015.wwwconference.org/'
+            '2015': 'http://www2015.wwwconference.org/',
         }
     ),
 
