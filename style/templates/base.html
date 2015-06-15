@@ -53,6 +53,9 @@
     <div id="sidebars">
       <nav class="widget">
       <h3><a href="//www.owlfolio.org/">« Owl’s Portfolio</a></h3>
+      {% if output_file != "index.html" %}
+      <h3><a href="/">&thinsp;‹ Readings </a></h3>
+      {% endif %}
       </nav>
       {% block siteindex %}
       {{ category_list(categories) }}

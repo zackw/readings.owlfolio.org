@@ -12,31 +12,6 @@ year: 2015
 venue: WWW
 ...
 
-I apologize for the lengthy and unannounced hiatus.  I was busy
-writing a paper of my own for several weeks and then I was on
-(previously scheduled) vacation.  Posts here will be three days a week
-until further notice; this should allow me to build up a posting
-buffer that can survive future such crunch periods.
-
-Small structural update: In lieu of comments, I encourage you to
-annotate these reviews using [hypothes.is](https://hypothes.is/),
-whose sidebar controls should now appear in the upper right-hand
-corner of individual articles.  This is not an ideal solution: it
-requires JS even to _see_ the annotations, they are stored on a
-service I don't control, it doesn't understand how the same text can
-appear in many different contexts, and I have no idea what moderation
-mechanisms, if any, are available to me.  However, the service's goals
-are reasonably aligned with my intentions for this site, and it was
-easy to set up.
-
-(I *could* spin up my own instance of the software, but
-[that would *not* have been easy](https://h.readthedocs.org/en/latest/INSTALL.html),
-and to some extent it would defeat the purpose of hypothes.is, there
-being no cross-installation aggregation of annotations at present as
-far as I can tell.)
-
-----
-
 Today's paper appeared in [WWW 2015][www2015] and was also
 [summarized on Google's security blog][lupkqg-b].  The subtitle is
 "[Lessons from the Use of Personal Knowledge Questions at Google][lupkqg],"

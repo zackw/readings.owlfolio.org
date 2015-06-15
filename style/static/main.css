@@ -163,6 +163,9 @@ thead > tr:last-child > th, thead > tr:last-child > td {
   font-size: 1.5em;
   margin: 1em 0 0.5em;
 }
+.widget > h3 + h3 {
+  margin-top: -0.5em;
+}
 
 .widget > ul {
   margin: 0;
