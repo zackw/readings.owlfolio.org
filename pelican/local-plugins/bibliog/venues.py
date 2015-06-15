@@ -206,7 +206,14 @@ VENUES = {
         name = 'Computer Networks',
         url = 'http://www.sciencedirect.com/science/journal/13891286/',
         url_vol =
-            'http://www.sciencedirect.com/science/journal/13891286/{volume}/',
+            'http://www.sciencedirect.com/science/journal/13891286/{volume}/'
+    ),
+
+    'j.ics': Journal(
+        name = 'Information, Communication & Society',
+        url = 'http://www.tandfonline.com/loi/rics20',
+        url_vol_iss =
+            'http://www.tandfonline.com/toc/rics20/{volume}/{issue}'
     ),
 
     'PNAS': Journal(
