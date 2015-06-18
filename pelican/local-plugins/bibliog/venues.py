@@ -180,6 +180,12 @@ VENUES = {
             '2015': 'http://www.ieee-security.org/TC/SP2015/',
         }
     ),
+    'PETS': Conference(
+        name = 'Privacy Enhancing Technologies',
+        urls = {
+            '2014': 'https://petsymposium.org/2014/',
+        }
+    ),
     'WOOT': Conference(
         name = 'Workshop on Offensive Technologies',
         organization = 'USENIX',
