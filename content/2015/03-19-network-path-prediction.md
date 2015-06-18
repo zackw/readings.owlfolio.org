@@ -1,7 +1,7 @@
 ---
 title: "Defending Tor from Network Adversaries:
         A Case Study of Network Path Prediction"
-tags: [tor, routing, autonomous systems, traffic analysis, traceroute]
+tags: [tor, routing, autonomous systems, traffic analysis, traceroute, anonymity]
 authors:
  - Juen, Joshua
  - Das, Anupam

@@ -92,13 +92,16 @@ CSPRNG construction, which I will now quote verbatim.
 
 It's a blink-and-you-miss-it sort of thing: by “all operations are
 over $\mathbb{F}_{2^n}$” they are specifying that both the “refresh”
-and “next” steps make use of arithmetic over finite Galois fields
-(more usually referred to as $\operatorname{GF}(2^n)$ in crypto
-literature).  $n$ has to be large—section 6.1 of the paper suggests
-specific fields with $n$ = 489, 579, and 705. I am informed that such
-arithmetic is “awful” to implement in software, not just difficult but
-risking side-channel attacks if not done perfectly, and often quite
-slow.
+and “next” steps make use of arithmetic over
+[finite, nonprime fields][fnpf] (more usually referred to as
+$\operatorname{GF}(2^n)$ in crypto literature).  $n$ has to be
+large—section 6.1 of the paper suggests specific fields with $n$ =
+489, 579, and 705.  The known techniques for this kind of arithmetic
+are all very slow, require large look-up tables (and therefore permit
+side-channel attacks), or cannot be used for a software
+implementation. [[1]][] [[2]][] This makes them impractical for a
+cryptographic component of an operating system that cannot rely on
+special-purpose hardware.
 
 Both problems arise from the same source, namely wanting to build the
 algorithm around a keyed hash so that the entropy extractor is fully
@@ -113,3 +116,7 @@ then pick that hash for its practical utility.
 
 ... Oddly enough, this hypothetical construction looks an awful lot
 like the existing Linux CSPRNG.
+
+[fnpf]: https://en.wikipedia.org/wiki/Finite_field#Non-prime_fields
+[[1]]: http://www.ams.org/journals/mcom/1980-35-152/S0025-5718-1980-0583513-7/S0025-5718-1980-0583513-7.pdf
+[[2]]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.121.2769&rep=rep1&type=pdf
