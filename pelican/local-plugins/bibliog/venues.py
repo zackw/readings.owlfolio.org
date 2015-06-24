@@ -185,6 +185,7 @@ VENUES = {
         name = 'Symposium on Security and Privacy',
         organization = 'IEEE',
         urls = {
+            '2003': 'http://www.ieee-security.org/TC/SP2003/sp03prelimprogram.html',
             '2015': 'http://www.ieee-security.org/TC/SP2015/',
         }
     ),
