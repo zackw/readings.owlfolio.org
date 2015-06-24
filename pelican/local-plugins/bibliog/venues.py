@@ -157,6 +157,7 @@ VENUES = {
         organization = 'ACM SIGCOMM',
         urls = {
             '2013': 'http://conferences.sigcomm.org/imc/2013/',
+            '2014': 'http://conferences.sigcomm.org/imc/2014/',
         }
     ),
     'LangSec': Conference(
