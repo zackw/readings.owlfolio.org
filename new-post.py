@@ -109,14 +109,14 @@ def main(argv, stdout):
         with open(os.path.join(CONTENT_BASE, path), "xt") as f:
             f.write(textwrap.dedent("""\
             ---
-            title:
+            title: "{}"
             tags: []
             authors:
              -
             year:
             venue:
             ...
-            """))
+            """).format(" ".join(argv[1:])))
 
         stdout.write("Created content/{}\n".format(path))
 
