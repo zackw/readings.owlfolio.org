@@ -160,6 +160,13 @@ VENUES = {
             '2014': 'http://conferences.sigcomm.org/imc/2014/',
         }
     ),
+    'ISCA': Conference(
+        name = 'International Symposium on Computer Architecture',
+        organization = 'ACM SIGARCH',
+        urls = {
+            '2014': 'http://cag.engr.uconn.edu/isca2014/'
+        }
+    ),
     'LangSec': Conference(
         name = 'Workshop on Language-Theoretic Security',
         organization = 'IEEE',

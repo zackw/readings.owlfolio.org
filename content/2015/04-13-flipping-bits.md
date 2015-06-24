@@ -13,7 +13,10 @@ authors:
  - Lai, Konrad
  - Mutlu, Onur
 year: 2014
-venue:
+venue: ISCA
+eprints:
+  doi: 10.1145/2663716.2663750
+url: http://www.cfall.in/pubs/isca2014_bitflips.pdf
 ...
 
 A few weeks ago, a new exploit technique called "[rowhammering][]" was
