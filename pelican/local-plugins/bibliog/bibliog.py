@@ -75,7 +75,14 @@ def adjust_metadata(generator, metadata):
     # The publication year becomes the category.  This is a kludge-around
     # the absence of indices on arbitrary metadata columns (and the
     # requirement to have _some_ category).
-    metadata['category'] = Category(str(metadata['year']), generator.settings)
+    if 'year' in metadata:
+        metadata['category'] = Category(str(metadata['year']),
+                                        generator.settings)
+    else:
+        logger.warning("no publication year for article" +
+                       ((" " + repr(metadata['slug']))
+                        if 'slug' in metadata else "'?'"))
+        metadata['category'] = 'NO_YEAR'
 
     # The 'url' field is renamed 'fulltext_url', if present.
     # (We use it for a non-systematic URL of the full text of a paper,
