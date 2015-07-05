@@ -48,8 +48,7 @@ wants to attract users away from existing services.
 
 (In the current world, encryption is a signal of *not* being spam, but
 in a world where most messages were encrypted, spammers would start
-using encryption, and so would your
-<abbr title="pointy-haired boss">PHB</abbr> who keeps sending you
+using encryption, and so would your [PHB][] who keeps sending you
 virus-infected spreadsheets that you have to look at for your job.)
 
 Another key difference is, you can unilaterally start using Tor,
@@ -72,3 +71,4 @@ specifically prompted about it.
 
 [deters]: /2014/jane-prevents-tracking/
 [[1]]: https://moderncrypto.org/mail-archive/messaging/2014/000780.html
+[PHB]: http://dilbert.wikia.com/wiki/Pointy-Haired_Boss
