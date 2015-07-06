@@ -1,7 +1,7 @@
 ---
 title: "Large-scale Spatiotemporal Characterization of Inconsistencies
         in the World's Largest Firewall"
-tags: [censorship, china, field observations, side channels]
+tags: [censorship, china, side channels]
 authors:
  - Ensafi, Roya
  - Winter, Philipp

@@ -1,7 +1,7 @@
 ---
 title: "Links that speak: The global language network and its
         association with global fame"
-tags: [field observations, natural language, culture]
+tags: [large sample, natural language, culture]
 authors:
  - Ronen, Shahar
  - Gonçalves, Bruno

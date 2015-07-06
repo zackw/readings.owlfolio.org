@@ -1,6 +1,6 @@
 ---
 title: Analysis of the HTTPS Certificate Ecosystem
-tags: [pki, https, field observations]
+tags: [pki, https, large sample]
 authors:
  - Durumeric, Zakir
  - Kasten, James

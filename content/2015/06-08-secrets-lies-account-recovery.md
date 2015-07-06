@@ -1,7 +1,6 @@
 ---
 title: "Secrets, Lies, and Account Recovery"
-tags: [passwords, account recovery questions, authentication,
-       field observations]
+tags: [passwords, account recovery questions, authentication]
 authors:
  - Bonneau, Joseph
  - Bursztein, Elie

@@ -1,6 +1,6 @@
 ---
 title: "Ad Injection at Scale: Assessing Deceptive Advertisement Modifications"
-tags: [advertising, web, malware, software ecology, field observations]
+tags: [advertising, web, malware, software ecology, large sample]
 authors:
  - Thomas, Kurt
  - Burzstein, Elie

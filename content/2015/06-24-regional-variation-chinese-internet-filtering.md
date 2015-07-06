@@ -1,6 +1,6 @@
 ---
 title: Regional Variation in Chinese Internet Filtering
-tags: [censorship, china, dns, field observations]
+tags: [censorship, china, dns]
 authors:
  - Joss Wright
 year: 2014

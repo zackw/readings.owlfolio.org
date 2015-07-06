@@ -1,6 +1,6 @@
 ---
 title: "A Look at the Consequences of Internet Censorship Through an ISP Lens"
-tags: [censorship, circumvention, field observations, pakistan]
+tags: [censorship, circumvention, pakistan]
 authors:
  - Khattak, Sheharbano
  - Javed, Mobin
