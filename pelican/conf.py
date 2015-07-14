@@ -48,12 +48,13 @@ CATEGORIES_SAVE_AS  = ''
 TAGS_SAVE_AS        = 't/index.html'
 
 TAG_CAPITALIZATION  = {
-    'bgp'   : 'BGP',
-    'dns'   : 'DNS',
-    'https' : 'HTTPS',
-    'ipv4'  : 'IPv4',
-    'ipv6'  : 'IPv6',
-    'pki'   : 'PKI',
+    'bgp'            : 'BGP',
+    'diffie-hellman' : 'Diffie-Hellman',
+    'dns'            : 'DNS',
+    'https'          : 'HTTPS',
+    'ipv4'           : 'IPv4',
+    'ipv6'           : 'IPv6',
+    'pki'            : 'PKI',
 }
 
 PAGINATION_PATTERNS = [
