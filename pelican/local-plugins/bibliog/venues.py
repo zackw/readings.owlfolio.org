@@ -152,6 +152,12 @@ VENUES = {
             '2014': 'http://conferences.sigcomm.org/hotnets/2014/',
         }
     ),
+    'HotPETS': Conference(
+        name = 'Hot Topics in Privacy Enhancing Technologies',
+        urls = {
+            '2015': 'https://www.petsymposium.org/2015/hotpets.php'
+        }
+    ),
     'IFIP SEC': Conference(
         name = 'International Information Security and Privacy Conference',
         organization = 'International Federation for Information Processing',
