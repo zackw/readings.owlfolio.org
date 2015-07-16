@@ -266,7 +266,11 @@ class EPrint:
         self.colon    = colon
 
     def get_url(self, data):
-        return self.base_url + data.strip()
+        data = data.strip()
+        if '{}' in self.base_url:
+            return self.base_url.format(data)
+        else:
+            return self.base_url + data
 
     def _build_link(self, data, url):
         return H.DIV(H.CLASS("eprint " + self.name.lower()),
@@ -297,6 +301,8 @@ class Arxiv(EPrint):
 EPRINTS = {
     'arxiv': Arxiv(),
     'iacr':  EPrint('IACR', 'http://eprint.iacr.org/'),
+    'i-d':   EPrint('Internet-Draft',
+                    'https://datatracker.ietf.org/doc/draft-{}/'),
     'rfc':   EPrint('RFC',  'https://tools.ietf.org/html/rfc', colon=False),
     'doi':   EPrint('DOI',  'http://dx.doi.org/')
 }
