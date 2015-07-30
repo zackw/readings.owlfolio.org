@@ -208,6 +208,12 @@ VENUES = {
             '2014': 'https://petsymposium.org/2014/',
         }
     ),
+    'SATS': Conference(
+        name = 'Workshop on Surveillance & Technology',
+        urls = {
+            '2015': 'https://satsymposium.org/'
+        }
+    ),
     'WOOT': Conference(
         name = 'Workshop on Offensive Technologies',
         organization = 'USENIX',
