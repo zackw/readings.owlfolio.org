@@ -14,8 +14,7 @@ eprints:
   arxiv: "1410.1823 [cs.CR]"
 ...
 
-In a similar vein as
-[Tuesday's paper](/2014/anonymity-on-quicksand-using-bgp-to-compromise-tor/),
+In a similar vein as [Tuesday's paper](/2014/anonymity-quicksand/),
 this is an investigation of how practical it might be to _avoid_
 exposing Tor circuits to traffic analysis by an adversary who controls
 an Autonomous System.  Unlike Tuesday's paper, they assume that the
