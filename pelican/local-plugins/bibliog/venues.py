@@ -232,6 +232,7 @@ VENUES = {
         name = 'International World Wide Web Conference',
         urls = {
             '2015': 'http://www2015.wwwconference.org/',
+            '2006': 'http://www2006.wwwconference.org/',
         }
     ),
 
