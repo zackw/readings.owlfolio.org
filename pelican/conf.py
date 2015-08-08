@@ -55,6 +55,9 @@ TAG_CAPITALIZATION  = {
     'ipv4'           : 'IPv4',
     'ipv6'           : 'IPv6',
     'pki'            : 'PKI',
+    'rc4'            : 'RC4',
+    'tkip'           : 'TKIP',
+    'tls'            : 'TLS',
 }
 
 PAGINATION_PATTERNS = [

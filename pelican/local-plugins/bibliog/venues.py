@@ -214,6 +214,13 @@ VENUES = {
             '2015': 'https://satsymposium.org/'
         }
     ),
+    'USENIX Security': Conference(
+        name = 'USENIX Security Symposium',
+        organization = 'USENIX',
+        urls = {
+            '2015': 'https://www.usenix.org/conference/usenixsecurity15',
+        }
+    ),
     'WOOT': Conference(
         name = 'Workshop on Offensive Technologies',
         organization = 'USENIX',
