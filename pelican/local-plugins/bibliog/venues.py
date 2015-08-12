@@ -169,6 +169,7 @@ VENUES = {
         name = 'Internet Measurement Conference',
         organization = 'ACM SIGCOMM',
         urls = {
+            '2012': 'http://conferences.sigcomm.org/imc/2012/',
             '2013': 'http://conferences.sigcomm.org/imc/2013/',
             '2014': 'http://conferences.sigcomm.org/imc/2014/',
         }
