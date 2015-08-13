@@ -207,6 +207,7 @@ VENUES = {
         name = 'Privacy Enhancing Technologies',
         urls = {
             '2014': 'https://petsymposium.org/2014/',
+            '2015': 'https://petsymposium.org/2015/',
         }
     ),
     'SATS': Conference(
