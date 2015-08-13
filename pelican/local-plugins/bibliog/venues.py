@@ -213,7 +213,14 @@ VENUES = {
     'SATS': Conference(
         name = 'Workshop on Surveillance & Technology',
         urls = {
-            '2015': 'https://satsymposium.org/'
+            '2015': 'https://satsymposium.org/',
+        }
+    ),
+    'SOUPS': Conference(
+        name = 'Symposium on Usable Privacy and Security',
+        organization = 'ACM',
+        urls = {
+            '2010': 'https://cups.cs.cmu.edu/soups/2010/',
         }
     ),
     'USENIX Security': Conference(
