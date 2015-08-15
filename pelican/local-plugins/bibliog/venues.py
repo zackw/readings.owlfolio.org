@@ -132,6 +132,12 @@ class Preprint(Venue):
 
 VENUES = {
     # Conferences, alpha by tag
+    'ACL-IJCNLP': Conference(
+        name = 'Association for Computational Linguistics',
+        urls = {
+            '2015': 'http://acl2015.org/'
+        }
+    ),
     'ATIS': Conference(
         name = 'Applications and Techniques in Information Security',
         urls = {
@@ -143,6 +149,13 @@ VENUES = {
         organization = 'ACM SIGSAC',
         urls = {
             '2013': 'http://www.sigsac.org/ccs/CCS2013/',
+        }
+    ),
+    'FOCI': Conference(
+        name = 'Free and Open Communications on the Internet',
+        organization = 'USENIX',
+        urls = {
+            '2012': 'https://www.usenix.org/conference/foci12',
         }
     ),
     'HotNets': Conference(
