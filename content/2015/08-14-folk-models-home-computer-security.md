@@ -14,7 +14,7 @@ consequence) get exploited.  This paper is not the first, or the last,
 to investigate why; see also the "What Deters Jane" papers [[1]][]
 [[2]][],
 "[So Long and No Thanks for the Externalities][externalities]," and
-"[Users Are Not the Enemy][users-not-enemy].
+"[Users Are Not the Enemy][users-not-enemy]."
 However, this paper provides a much more compelling explanation than
 anything earlier (that I have read), and a lens through which to view
 everything since.  It's plainly written and requires almost no
@@ -83,8 +83,8 @@ observing that none of them account for the possibility that an
 attacker might subvert computers indiscriminately and automatically,
 then use them only for their Internet connection.  In particular, all
 of the "hacker" models assume that computers are attacked in order to
-do something to _that_ computer, rather than as a means to a goal that
-doesn't involve it (sending spam, enlarging the botnet, executing DDoS
+do something to _that_ computer, rather than as a means to an
+unrelated goal (sending spam, enlarging the botnet, executing DDoS
 attacks, ...) and that the hacker must be doing something manually at
 the time of the attack.
 

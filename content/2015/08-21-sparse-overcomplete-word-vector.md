@@ -10,7 +10,7 @@ authors:
 year: 2015
 venue: ACL-IJCNLP
 eprints:
- arxiv: 1506.02004
+ arxiv: 1506.02004 [cs.CL]
 ...
 
 It's time for another of my occasional looks at a paper that doesn't

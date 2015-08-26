@@ -52,7 +52,7 @@ _can_ understand it.  Shoot for the
 was the ["tutorial and concepts guide" for GnuCash][gnucash-tut],
 which took just this tone with regard to
 [double-entry bookkeeping][]---also somewhat notorious for its
-inscrutability.  (Note: I read this quite time ago, and I don't know
+inscrutability.  (Note: I read this a long time ago, and I don't know
 whether its current edition is still like that.)
 
 [Tor Browser]: https://www.torproject.org/projects/torbrowser.html.en
