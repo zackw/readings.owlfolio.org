@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 449.85958 56.80396">
+ <g font-size="10px" font-family="'Droid Sans', sans-serif">
+  <g style="text-anchor:end;text-align:end">
+   <text y="14.797685" x="70.954323">Representable</text>
+   <text y="28.39534" x="70.954323">Producible</text>
+   <text y="49.46233" x="84.725502">0.001953124</text>
+   <text y="49.46233" x="153.11662">0.001953125</text>
+   <text y="49.46233" x="220.56903">0.001953126</text>
+  </g>
+  <text y="49.46233" x="236.97159">0.003906249</text>
+  <text y="49.46233" x="304.57159">0.003906250</text>
+  <text y="49.46233" x="372.02402">0.003906251</text>
+ </g>
+ <g stroke="#000" fill="none">
+  <path d="m150.48 38.208v-4.25m-67.58 4.2501v-4.2502h135.1v4.2502"/>
+  <path d="m374.64 38.208v-4.25m-67.52 4.25v-4.25m-67.52 4.25v-4.25l202.56-0.000153v4.2502"/>
+  <g stroke-width="0.8">
+   <circle cy="12.2" cx="82.96" r="2"/>
+   <circle cy="12.2" cx="89.72" r="2"/>
+   <circle cy="12.2" cx="96.47" r="2"/>
+   <circle cy="12.2" cx="103.22" r="2"/>
+   <circle cy="12.2" cx="109.97" r="2"/>
+   <circle cy="12.2" cx="116.72" r="2"/>
+   <circle cy="12.2" cx="130.23" r="2"/>
+   <circle cy="12.2" cx="136.98" r="2"/>
+   <circle cy="12.2" cx="143.73" r="2"/>
+   <circle cy="12.2" cx="150.48" r="2"/>
+   <circle cy="12.2" cx="163.99" r="2"/>
+   <circle cy="12.2" cx="184.24" r="2"/>
+   <circle cy="12.2" cx="197.75" r="2"/>
+   <circle cy="12.2" cx="211.25" r="2"/>
+   <circle cy="12.2" cx="246.36" r="2"/>
+   <circle cy="12.2" cx="259.86" r="2"/>
+   <circle cy="12.2" cx="273.36" r="2"/>
+   <circle cy="12.2" cx="293.62" r="2"/>
+   <circle cy="12.2" cx="307.12" r="2"/>
+   <circle cy="12.2" cx="340.88" r="2"/>
+   <circle cy="12.2" cx="367.89" r="2"/>
+   <circle cy="12.2" cx="401.65" r="2"/>
+   <circle cy="12.2" cx="435.41" r="2"/>
+   <circle cy="25.798" cx="89.72" r="2"/>
+   <circle cy="25.798" cx="103.22" r="2"/>
+   <circle cy="25.798" cx="116.72" r="2"/>
+   <circle cy="25.798" cx="136.98" r="2"/>
+   <circle cy="25.798" cx="150.48" r="2"/>
+   <circle cy="25.798" cx="163.99" r="2"/>
+   <circle cy="25.798" cx="184.24" r="2"/>
+   <circle cy="25.798" cx="197.75" r="2"/>
+   <circle cy="25.798" cx="211.25" r="2"/>
+   <circle cy="25.798" cx="246.36" r="2"/>
+   <circle cy="25.798" cx="259.86" r="2"/>
+   <circle cy="25.798" cx="273.36" r="2"/>
+   <circle cy="25.798" cx="293.62" r="2"/>
+   <circle cy="25.798" cx="307.12" r="2"/>
+   <circle cy="25.798" cx="320.63" r="2"/>
+   <circle cy="25.798" cx="340.88" r="2"/>
+   <circle cy="25.798" cx="354.38" r="2"/>
+   <circle cy="25.798" cx="367.89" r="2"/>
+   <circle cy="25.798" cx="388.14" r="2"/>
+   <circle cy="25.798" cx="401.65" r="2"/>
+   <circle cy="25.798" cx="415.15" r="2"/>
+   <circle cy="25.798" cx="435.41" r="2"/>
+  </g>
+ </g>
+ <circle cy="12.2" cx="225.65" r="1"/>
+ <circle cy="12.2" cx="228.8" r="1"/>
+ <circle cy="12.2" cx="231.96" r="1"/>
+ <circle cy="25.798" cx="225.65" r="1"/>
+ <circle cy="25.798" cx="228.8" r="1"/>
+ <circle cy="25.798" cx="231.96" r="1"/>
+</svg>
