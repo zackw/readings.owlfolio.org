@@ -151,6 +151,13 @@ VENUES = {
             '2013': 'http://www.sigsac.org/ccs/CCS2013/',
         }
     ),
+    'CSET': Conference(
+        name = 'Cyber Security Experimentation and Test',
+        organization = 'USENIX',
+        urls = {
+            '2012': 'https://www.usenix.org/conference/cset12',
+        }
+    ),
     'FOCI': Conference(
         name = 'Free and Open Communications on the Internet',
         organization = 'USENIX',
