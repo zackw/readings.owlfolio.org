@@ -1,6 +1,6 @@
 ---
 title: "All Your Biases Belong To Us: Breaking RC4 in WPA-TKIP and TLS"
-tags: [rc4, tkip, tls, cryptanalysis]
+tags: [rc4, tkip, tls, cryptanalysis, random number generation]
 authors:
  - Vanhoef, Mathy
  - Piessens, Frank
