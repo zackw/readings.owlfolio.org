@@ -48,11 +48,11 @@ in mid-2013; this has a [clear explanation][], and they show that
 their detector _ignores_ it (as it's supposed to), but can they make
 their detector call it out _separately_ from country-specific events?
 PCA should be able to do that.  Similarly, it seems quite probable
-that the ongoing revolutions and civil wars in the Levant and North
-Africa are causing _correlated_ changes to degree of censorship
-region-wide; PCA should be able to pull that out as a separate
-explanatory variable.  These would both involve taking a closer look
-at the "normal subspace" and what each of its dimensions mean.
+that the ongoing revolutions and wars in the Levant and North Africa
+are causing _correlated_ changes to degree of censorship region-wide;
+PCA should be able to pull that out as a separate explanatory
+variable.  These would both involve taking a closer look at the
+"normal subspace" and what each of its dimensions mean.
 
 It also seems to me that a bit of preprocessing, using standard
 [time series decomposition][] techniques, would "clean up" the
