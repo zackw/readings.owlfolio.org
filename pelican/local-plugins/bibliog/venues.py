@@ -185,6 +185,7 @@ VENUES = {
             '2012': 'http://conferences.sigcomm.org/imc/2012/',
             '2013': 'http://conferences.sigcomm.org/imc/2013/',
             '2014': 'http://conferences.sigcomm.org/imc/2014/',
+            '2015': 'http://conferences.sigcomm.org/imc/2015/',
         }
     ),
     'ISCA': Conference(
@@ -208,6 +209,13 @@ VENUES = {
             '2015': 'http://www.ieee-security.org/TC/SPW2015/MoST/',
         }
     ),
+    'NDSS': Conference(
+        name = 'Network and Distributed System Security Symposium',
+        organization = 'Internet Society',
+        urls = {
+            '2015': 'https://www.internetsociety.org/events/ndss-symposium-2015',
+        }
+    ),
     'Oakland': Conference(
         name = 'Symposium on Security and Privacy',
         organization = 'IEEE',
@@ -227,6 +235,13 @@ VENUES = {
         name = 'Workshop on Surveillance & Technology',
         urls = {
             '2015': 'https://satsymposium.org/',
+        }
+    ),
+    'SIGCOMM': Conference(
+        name = 'SIGCOMM',
+        organization = 'ACM SIGCOMM',
+        urls = {
+            '2015': 'http://conferences.sigcomm.org/sigcomm/2015/'
         }
     ),
     'SOUPS': Conference(

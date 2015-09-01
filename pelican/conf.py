@@ -24,8 +24,8 @@ WITH_FUTURE_DATES      = False
 
 PATH                = 'content'
 PAGE_PATHS          = ['pages']
-STATIC_PATHS        = ['',]
-IGNORE_FILES        = ['.#*', '*~', '#*#']
+STATIC_PATHS        = ['i']
+IGNORE_FILES        = ['.#*', '*~', '#*#', '.DS_Store']
 ARTICLE_EXCLUDES    = []
 
 THEME               = '../style'
