@@ -130,6 +130,12 @@ class Preprint(Venue):
         Venue.__init__(self, name='Preprint')
         self.bibtex_type = 'unpublished'
 
+    def get_link(self, citation):
+        year = str(citation.get('year', '')).strip()
+        if year:
+            return H.SPAN(year)
+        return None
+
 VENUES = {
     # Conferences, alpha by tag
     'ACL-IJCNLP': Conference(
