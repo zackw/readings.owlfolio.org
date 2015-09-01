@@ -48,18 +48,24 @@ The *second* half of the paper is devoted to ethical and practical
 considerations.  Doing this at all is controversial---in a box on the
 first page, above the title of the paper, there's a statement from the
 SIGCOMM 2015 program committee, saying the paper almost got rejected
-because some reviewers felt it shouldn't be done.  SIGCOMM also
-published a [page-length review][] by John Byers, saying much the same
-thing.  George Danezis wrote a [rebuttal][] arguing that the
+because some reviewers felt it was unethical to do anything of the
+kind without [informed consent][] by the people whose computers are
+enlisted to make measurements.  SIGCOMM also published a
+[page-length review][] by John Byers, saying much the same thing.
+Against this, the authors argue that informed consent in this case is
+of dubious benefit, since it does not reduce the risk to the
+enlistees, and may actually be *harmful* by "removing any traces of
+plausible deniability."  They also point out that many people would
+need a preliminary course in how Internet censorship works and how
+Encore measures it before they *could* make an informed choice about
+whether to participate in this research.  Limiting the pool of
+enlistees to those who already have the necessary technical background
+would "dramatically reduce the scale and scope of measurements."
+Finally they observe that the benefits of collecting this data are
+clear, whereas the risks are nebulous.  In a similar vein, George
+Danezis wrote a [rebuttal][] of the public review, arguing that the
 reviewers' concerns are based on a superficial understanding of what
-ethical research in this area looks like.  I am largely in agreement
-with Danezis, although I would add that this does not mean I think
-Encore should go ahead as is.  Rather, we need to look past the
-superficial notions that (a) informed consent is the gold standard for
-all research involving people in some way, (b) harm is binary---an
-experiment either does or does not harm each person involved in the
-study, (c) anyone interacting with an ethical problem is directly
-responsible for the entire scope of the problem.
+ethical research in this area looks like.
 
 Let's be concrete about the risks involved.  Encore modifies a webpage
 such that web browsers accessing it will, automatically and invisibly
@@ -113,43 +119,44 @@ MITM the opportunity to inject malware.
 
 The ethical debate over this paper has largely focused on increased
 risk of legal, or quasilegal, sanctions taken against people whose
-browsers were enlisted to run Encore tests.  I have two things to say
-about that.  First, informed consent would actually make that risk
+browsers were enlisted to run Encore tests.  I endorse the authors'
+observation that informed consent would actually make that risk
 **worse**.  Because there are so many reasons a computer might contact
 a network server without its owner's knowledge, people already have
 plausible deniability regarding accesses to controversial material
 (i.e. "I never did that, it must have been a virus or something").  If
 Encore told its enlistees what it was doing and gave them a chance to
-opt out, it would take that away.  Second, I didn't see one word---in
-the paper, or in the reviews and rebuttals and ongoing discussion---to
-suggest that *anyone* has bothered to talk to lawyers and activists
-from the actual countries of interest to find out how serious this
-risk is.  The organizations that the authors *are* talking to
-([Citizen Lab][], [Oxford Internet Institute][], the
-[Berkman Center][]) should have appropriate contacts already or be
-able to find them reasonably quickly.
+opt out, it would take that away.
 
-In the absence of expert opinions from people who would know, I'm
-inclined to think the non-legal risks involved here are more of a
-concern than the legal risks.  We do know, after all, that many of the
-countries involved are not nearly as aggressive about filtering the
-Internet as they could be, [[7]][] and that makes me think they also
-probably can't be bothered to prosecute people just for an occasional
-attempt to access stuff that is blocked.  It could still be that they
-do prosecute people for *bulk* attempts to access stuff that is
-blocked, but Encore's approach---many people doing a few tests---would
-tend to avoid that.  There's enough uncertainty that I think
-researchers *should* talk to people in a position to know for real,
-but meanwhile, all the worry over legal risks has distracted from
-worrying about the non-legal risks.  Encore itself has, as far as I
-can tell, *no* hardening against MITM manipulation of its own code or
-the results sent back---that should be priority number one.  If I were
-trying to collect this type of data, I would be more inclined to the
-[Herdict][] approach, where people opt in to collection of data about
-sites they were going to visit anyway.  That gets around many of the
-ethical issues and addresses several technical problems as well, but
-does have its own issues, such as revealing people's full browsing
-histories to the researchers.
+Nobody involved in the debate knows how serious this risk really is.
+We do know that many countries are not nearly as aggressive about
+filtering the Internet as they could be, [[7]][] so it's reasonable to
+think they can't be bothered to prosecute people just for an
+occasional attempt to access stuff that is blocked.  It could still be
+that they do prosecute people for *bulk* attempts to access stuff that
+is blocked, but Encore's approach---many people doing a few
+tests---would tend to avoid that.  But there's enough uncertainty that
+I think the authors should be talking to people in a position to know
+for certain: lawyers and activists from the actual countries of
+interest.  There is not one word either in the papers or the reviews
+to suggest that anyone has done this. The organizations that the
+authors *are* talking to ([Citizen Lab][],
+[Oxford Internet Institute][], the [Berkman Center][]) should have
+appropriate contacts already or be able to find them reasonably
+quickly.
+
+Meanwhile, all the worry over legal risks has distracted from worrying
+about the non-legal risks.  The Encore authors are fairly dismissive
+of the possibility that the MITM might subvert Encore's own code or
+poison the results; I think that's a mistake.  They consider the extra
+bandwidth costs Encore incurs, but they don't consider the possibility
+of exposing the enlistee to malware on a page (when they load an
+entire page).  More thorough monitoring and reportage on Internet
+censorship might cause the censor to change its behavior, and not
+necessarily for the better---for instance, if it's known that some
+ISPs are less careful about their filtering, that might trigger
+sanctions against *them*.  These are just the things I can think of
+off the top of my head.
 
 In closing, I think the controversy over this paper is more about the
 community not having come to an agreement about its own research
@@ -172,6 +179,7 @@ lead to better handling of future, similar papers.
 [[1]]: /2014/inconsistencies-worlds-largest-firewall/
 [[2]]: http://pam2011.gatech.edu/papers/pam2011--Xu.pdf
 [[3]]: /2014/regional-variation-chinese-internet-filtering/
+[informed consent]: https://en.wikipedia.org/wiki/Informed_consent
 [page-length review]: http://conferences.sigcomm.org/sigcomm/2015/pdf/reviews/226pr.pdf
 [rebuttal]: https://conspicuouschatter.wordpress.com/2015/08/20/on-the-morals-of-network-research-and-beyond/
 [[4]]: http://www.leviathansecurity.com/blog/the-case-of-the-modified-binaries/
@@ -181,6 +189,5 @@ lead to better handling of future, similar papers.
 [Oxford Internet Institute]: http://www.oii.ox.ac.uk/
 [Berkman Center]: https://cyber.law.harvard.edu/
 [[7]]: /2012/whiskey-weed-wukan/
-[Herdict]: https://www.herdict.org/
 [IRB]: https://en.wikipedia.org/wiki/Institutional_review_board
 [ws-ethics]: http://conferences.sigcomm.org/sigcomm/2015/netethics.php
