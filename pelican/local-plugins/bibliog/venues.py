@@ -308,6 +308,11 @@ VENUES = {
             'http://www.tandfonline.com/toc/rics20/{volume}/{issue}'
     ),
 
+    'na.cyber.pol': Journal(
+        name = 'New America Cybersecurity Initiative Policy Papers',
+        url = 'https://www.newamerica.org/tags/cybersecurity-initiative-policy-papers/'
+    ),
+
     'PNAS': Journal(
         name = 'Proc Nat Acad Sci',
         url = 'http://www.pnas.org/',
