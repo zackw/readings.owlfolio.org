@@ -157,6 +157,13 @@ VENUES = {
             '2013': 'http://www.sigsac.org/ccs/CCS2013/',
         }
     ),
+    'CHES': Conference(
+        name = 'Cryptographic Hardware and Embedded Systems',
+        organization = 'IACR',
+        urls = {
+            '2013': 'http://www.chesworkshop.org/ches2013/'
+        }
+    ),
     'CSET': Conference(
         name = 'Cyber Security Experimentation and Test',
         organization = 'USENIX',
