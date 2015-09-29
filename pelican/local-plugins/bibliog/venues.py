@@ -124,6 +124,55 @@ class Journal(Venue):
 
         return link
 
+class InBook(Venue):
+    def __init__(self):
+        Venue.__init__(self, name='InBook')
+        self.bibtex_type = 'inbook'
+
+    def get_link(self, citation):
+        year = str(citation.get('year', '')).strip()
+        booktitle = str(citation.get('booktitle', '')).strip()
+        isbn = str(citation.get('isbn', '')).strip()
+        editors = citation.get('editors', [])
+
+        if booktitle:
+            link = H.I(booktitle)
+        else:
+            link = H.I("BOOK TITLE MISSING")
+
+        if isbn:
+            link = H.A(link,
+                       href=
+                       "https://www.worldcat.org/search?q=isbn%3A"
+                       + isbn.replace("-", ""))
+
+        link = H.SPAN("In ", link)
+
+        if editors:
+            ed_adj = []
+            #XXX Duplicates code in bibliog.py
+            for ed in editors:
+                last, _, first = ed.partition(", ")
+                # Don't allow word-wrapping between components of the first
+                # and last names.
+                first = first.strip().replace(" ", "\u00a0")
+                last  = last.strip().replace(" ", "\u00a0")
+                if not first:
+                    ed = last
+                else:
+                    ed = first + " " + last
+                ed_adj.append(ed)
+            if len(ed_adj) == 1:
+                ed_credit = "(" + ed_adj[0] + ", ed.)"
+            else:
+                ed_credit = " (" + ", ".join(ed_adj) + ", eds.)"
+            addText(link, ed_credit)
+
+        if year:
+            addText(link, ", " + year)
+
+        return link
+
 
 class Preprint(Venue):
     def __init__(self):
@@ -326,8 +375,9 @@ VENUES = {
         url_vol_iss = 'http://www.pnas.org/content/{volume}/{issue}.toc'
     ),
 
-    # Preprints
-    'preprint': Preprint()
+    # Other
+    'inbook': InBook(),
+    'preprint': Preprint(),
 }
 
 

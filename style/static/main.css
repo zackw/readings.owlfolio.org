@@ -148,7 +148,7 @@ thead > tr:last-child > th, thead > tr:last-child > td {
   font-style: italic;
   max-width: 45%;
 }
-.authors {
+.authors, .venue {
   padding-left: 1em;
   text-indent: -1em;
 }
