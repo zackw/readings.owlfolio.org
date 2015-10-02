@@ -203,7 +203,10 @@ VENUES = {
         name = 'Computer and Communications Security',
         organization = 'ACM SIGSAC',
         urls = {
+            '2001': 'http://www.sigsac.org/ccs/ccs-history.html#8th',
             '2013': 'http://www.sigsac.org/ccs/CCS2013/',
+            '2014': 'http://www.sigsac.org/ccs/CCS2014/',
+            '2015': 'http://www.sigsac.org/ccs/CCS2015/',
         }
     ),
     'CHES': Conference(
