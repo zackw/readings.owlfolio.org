@@ -193,6 +193,13 @@ VENUES = {
             '2015': 'http://acl2015.org/'
         }
     ),
+    'AIRWeb': Conference(
+        name = 'Adversarial Information Retrieval on the Web',
+        organization = 'ACM SIGIR',
+        urls = {
+            '2006': 'http://airweb.cse.lehigh.edu/2006/',
+        }
+    ),
     'ATIS': Conference(
         name = 'Applications and Techniques in Information Security',
         urls = {
@@ -299,6 +306,8 @@ VENUES = {
     'PETS': Conference(
         name = 'Privacy Enhancing Technologies',
         urls = {
+            '2012': 'https://petsymposium.org/2012/',
+            '2013': 'https://petsymposium.org/2013/',
             '2014': 'https://petsymposium.org/2014/',
             '2015': 'https://petsymposium.org/2015/',
         }
