@@ -25,7 +25,7 @@ The Tactical Technology Collective
 [exposing the invisible.org](https://exposingtheinvisible.org/); if
 you don't have time to watch a bunch of videos, I strongly recommend
 at least reading the transcribed
-[interview with Jesus Robles Maloof](https://exposingtheinvisible.org/sketches-in-depth/jesus/))
+[interview with Jesus Robles Maloof](https://exposingtheinvisible.org/films/sketch/jesus-robles-maloof-the-power/))
 is a "practitioner NGO working on digital security and privacy, with
 deep connections to activist communities around the world."  What this
 means is that they spend a lot of time going places and talking to

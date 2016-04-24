@@ -84,7 +84,7 @@ MENUITEMS = [
     ('Owl’s Portfolio', 'https://www.owlfolio.org/',            'left'),
     ('Hacks',           'https://hacks.owlfolio.org/',          'right'),
     ('Publications',    'https://hacks.owlfolio.org/pubs/',     'right'),
-    ('Photography',     'https://www.flickr.com/zackw/photos/', 'right')
+    ('Photography',     'https://www.flickr.com/photos/zackw/', 'right')
 ]
 
 # Feed generation is usually not desired when developing

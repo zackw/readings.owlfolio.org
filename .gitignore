@@ -1,6 +1,7 @@
 /output/
 /pelican/cache/
 /pelican.pid
+/pelican.prof
 /srv.pid
 *.pyc
 *.pyo

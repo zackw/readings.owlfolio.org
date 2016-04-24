@@ -33,10 +33,12 @@ with the possible exception of CERNET (China Education and Research
 Network), whose filtering is less aggressive.  The filtering occurs at
 major China-wide <abbr title="Internet Exchange Points">IXPs</abbr>,
 as suspected from previous studies.  The firewall appears to operate
-primarily by dropping _inbound_ traffic to China, perhaps because the
-system is optimized for keyword filtering on inbound traffic [[4]][].
-Finally, there is concrete evidence for "failures", lasting hours at a
-time, uncorrelated with geographic location, where traffic passes
+primarily by dropping _inbound_ traffic to China; the authors don't
+try to explain this, but earlier related research [[4]][] points out
+that the firewall must wait to see a TCP SYN/ACK packet before it can
+successfully forge RST packets in both directions.  Finally, there is
+concrete evidence for "failures", lasting hours at a time,
+uncorrelated with geographic location, where traffic passes
 uncensored.  This was anecdotally known to happen but not previously
 studied in any kind of detail, to my knowledge.  This paper doesn't
 speculate at all on *why* the failures happen or how we could figure
@@ -70,7 +72,7 @@ something about how to structure an experiment from this paper.
 [[1]]: http://pam2011.gatech.edu/papers/pam2011--Xu.pdf
 [[2]]: http://www.pseudonymity.net/~joss/doc/papers/2012/wright12variation.pdf
 [[3]]: https://www.usenix.org/system/files/conference/foci14/foci14-anonymous.pdf
-[[4]]: http://xylonpan.com/2013/12/14/%E7%BF%BB%E5%A2%99%E8%B7%AF%E7%94%B1%E5%99%A8%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/
+[[4]]: http://sec.cs.ucl.ac.uk/users/smurdoch/papers/is07ignoring.pdf
 [[5]]: http://arxiv.org/abs/1312.5739
 [[6]]: https://nmap.org/book/idlescan.html
 [Tor]: https://torproject.org/

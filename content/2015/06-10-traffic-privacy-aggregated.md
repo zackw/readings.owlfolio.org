@@ -59,5 +59,5 @@ with knowledge only of who is talking to whom. [[4]][]
 
 [[1]]: http://research.microsoft.com/pubs/119060/webappsidechannel-final.pdf
 [[2]]: http://static.usenix.org/events/sec07/tech/full_papers/wright/wright_html/
-[[3]]: https://www.ieee-security.org/TC/SP2011/PAPERS/2011/paper001.pdf
+[[3]]: http://www.ieee-security.org/TC/SP2011/PAPERS/2011/paper001.pdf
 [[4]]: http://www.slate.com/articles/health_and_science/science/2013/06/prism_metadata_analysis_paul_revere_identified_by_his_connections_to_other.single.html
