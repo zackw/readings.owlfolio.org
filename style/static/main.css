@@ -56,6 +56,12 @@ figure {
   width: -webkit-min-content;
   width: min-content;
 }
+figure.fig-width-75 {
+  width: 75%;
+}
+figure.fig-smallgap {
+  margin-top: 1em;
+}
 figcaption {
   font-size: smaller;
   font-style: italic;

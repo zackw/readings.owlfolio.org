@@ -65,7 +65,7 @@ and 2 as there are between 0.5 and 1, between 0.25 and 0.5, and so on,
 and each range's representable numbers are twice as far apart as those
 in the next smaller range.
 
-<figure style="width:75%;margin-top:1em"><img
+<figure class="fig-width-75 fig-smallgap"><img
 src="/i/2007/downey01-fig1.svg"><figcaption>Some of the numbers
 representable by an IEEE single-precision float (top row) and
 producible by dividing a 32-bit unsigned integer by $2^{32}-1$ (bottom
