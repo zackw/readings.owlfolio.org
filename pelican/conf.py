@@ -82,8 +82,8 @@ SITEMAP             = { 'format': 'xml' }
 MENUITEMS = [
     ('Contact',         'https://www.owlfolio.org/contact/',    'left'),
     ('Owl’s Portfolio', 'https://www.owlfolio.org/',            'left'),
-    ('Hacks',           'https://hacks.owlfolio.org/',          'right'),
-    ('Publications',    'https://hacks.owlfolio.org/pubs/',     'right'),
+    ('Research',        'https://research.owlfolio.org/',       'right'),
+    ('Publications',    'https://research.owlfolio.org/pubs/',  'right'),
     ('Photography',     'https://www.flickr.com/photos/zackw/', 'right')
 ]
 

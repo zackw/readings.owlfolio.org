@@ -103,5 +103,5 @@ ergonomics, and so on may be in tension.
 [[11]]: https://en.wikipedia.org/wiki/Padding_oracle_attack
 [[12]]: https://html.spec.whatwg.org/multipage/syntax.html#an-introduction-to-error-handling-and-strange-cases-in-the-parser
 [[13]]: http://dev.w3.org/csswg/css2/syndata.html#parsing-errors
-[[14]]: https://hacks.owlfolio.org/pubs/2010-protecting.pdf
+[[14]]: https://research.owlfolio.org/pubs/2010-protecting.pdf
 [RFC 1122]: https://tools.ietf.org/html/rfc1122#section-1.2.2
